@@ -1,0 +1,27 @@
+{
+ "ID": {
+  "Adams": "Q109815", "Ada": "Q109820", "Butte": "Q111298", "Bannock": "Q113017", "Clark": "Q156448",
+  "Clearwater": "Q175799", "Latah": "Q284840", "Bonner": "Q483932", "Cassia": "Q483947", "Washington": "Q486040",
+  "Camas": "Q486054", "Canyon": "Q486078", "Elmore": "Q486336", "Boise": "Q486357", "Boundary": "Q486366",
+  "Bear Lake": "Q486372", "Benewah": "Q486376", "Bonneville": "Q486380", "Lincoln": "Q486994", "Lemhi": "Q487415",
+  "Caribou": "Q488481", "Custer": "Q488512", "Bingham": "Q488548", "Blaine": "Q488582", "Minidoka": "Q491052",
+  "Teton": "Q491068", "Lewis": "Q491073", "Power": "Q491311", "Owyhee": "Q491316", "Valley": "Q491327",
+  "Oneida": "Q491331", "Twin Falls": "Q491339", "Payette": "Q491432", "Madison": "Q491456", "Kootenai": "Q494460",
+  "Idaho": "Q494480", "Franklin": "Q494494", "Fremont": "Q494508", "Gem": "Q494514", "Shoshone": "Q494518",
+  "Jefferson": "Q494526", "Jerome": "Q494536", "Nez Perce": "Q494569", "Gooding": "Q494575"
+ },
+ "MT": {
+  "Glacier": "Q31091", "Big Horn": "Q109503", "Beaverhead": "Q110212", "Blaine": "Q192650", "Broadwater": "Q192753",
+  "Carbon": "Q192992", "Carter": "Q193072", "Cascade": "Q193167", "Chouteau": "Q193230", "Mineral": "Q370329",
+  "Fallon": "Q373575", "Gallatin": "Q387978", "Daniels": "Q427315", "Silver Bow": "Q484513", "Garfield": "Q486961",
+  "Yellowstone": "Q490283", "Lincoln": "Q490344", "Judith Basin": "Q490471", "Sanders": "Q490734", "Stillwater": "Q490750",
+  "Dawson": "Q490762", "Deer Lodge": "Q490774", "Custer": "Q490789", "Meagher": "Q491569", "Wibaux": "Q496109",
+  "Wheatland": "Q496161", "Powder River": "Q496242", "Missoula": "Q496558", "Liberty": "Q496568", "Phillips": "Q496577",
+  "Musselshell": "Q496583", "Hill": "Q496589", "Madison": "Q496596", "Powell": "Q496602", "Flathead": "Q496607",
+  "Sweet Grass": "Q496616", "Granite": "Q496622", "Sheridan": "Q496629", "Petroleum": "Q496636", "Park": "Q496644",
+  "Lewis and Clark": "Q496656", "Rosebud": "Q496664", "Prairie": "Q496678", "Teton": "Q496685", "Fergus": "Q496693",
+  "Lake": "Q496700", "Pondera": "Q496708", "Richland": "Q496716", "Toole": "Q496722", "Jefferson": "Q496737",
+  "Treasure": "Q496744", "Roosevelt": "Q496751", "Ravalli": "Q496758", "Valley": "Q496764", "McCone": "Q497652",
+  "Golden Valley": "Q502554"
+ }
+}
