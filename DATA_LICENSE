@@ -1,0 +1,6 @@
+The compiled dataset in data/ (the selection, normalization, identifiers and cross-references)
+is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+Marker inscription texts are the published work of the issuing state agency named in each
+record's `source_agency` field and are not relicensed by this project.
