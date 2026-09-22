@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Roadside — Montana &amp; Idaho highway markers, read without pulling over</title>
+<meta name="description" content="An open map of every official roadside historical and geological marker in Montana and Idaho, with the sign text where the state publishes it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pmtiles@3.2.1/dist/pmtiles.js"></script>
+<style>
+  :root{
+    --board:#3F2814;        /* routed sign board */
+    --board-deep:#2C1B0D;
+    --letter:#EAD8AE;       /* painted lettering */
+    --letter-dim:#B89C6B;
+    --rail:#8C6A3B;
+    --mt:#5E7A52;           /* Montana pin: pine */
+    --id:#B0573B;           /* Idaho pin: rust */
+    --paper:#FAF8F3;
+    --ink:#221A12;
+    --ink-2:#6B5E4E;
+    --line:#E2DBCC;
+    --focus:#D6A33A;
+    --sans:"Source Sans 3",system-ui,-apple-system,sans-serif;
+    --slab:"Bitter",Georgia,"Times New Roman",serif;
+    --panel-w:392px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);overflow:hidden}
+  #map{position:absolute;inset:0}
+  .maplibregl-ctrl-attrib{font-family:var(--sans);font-size:11px}
+
+  /* ---------- side panel ---------- */
+  #panel{
+    position:absolute;top:0;left:0;bottom:0;width:var(--panel-w);
+    background:var(--paper);border-right:1px solid var(--line);
+    display:flex;flex-direction:column;z-index:5;
+    box-shadow:0 0 0 1px rgba(0,0,0,.02),8px 0 24px -16px rgba(40,25,10,.35);
+  }
+  header{padding:18px 20px 14px;border-bottom:1px solid var(--line)}
+  header h1{font:700 22px/1.1 var(--slab);margin:0 0 4px;letter-spacing:-.01em}
+  header p{margin:0;color:var(--ink-2);font-size:14px;line-height:1.35}
+  .tools{padding:12px 20px 10px;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line)}
+  .tools input[type=search]{
+    width:100%;padding:9px 12px;font:16px var(--sans);border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)
+  }
+  .tools input[type=search]:focus{outline:2px solid var(--focus);outline-offset:1px;border-color:transparent}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{
+    font:600 13px var(--sans);padding:5px 10px;border-radius:999px;border:1px solid var(--line);
+    background:#fff;color:var(--ink-2);cursor:pointer;display:inline-flex;align-items:center;gap:6px
+  }
+  .chip[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .chip .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+  .chip:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+  .count{font-size:13px;color:var(--ink-2);padding:0 20px 8px}
+
+  #list{flex:1;overflow:auto;list-style:none;margin:0;padding:0 0 24px}
+  #list li{border-bottom:1px solid var(--line)}
+  #list button{
+    all:unset;display:block;width:100%;padding:11px 20px;cursor:pointer
+  }
+  #list button:hover{background:#F1EDE2}
+  #list button:focus-visible{outline:2px solid var(--focus);outline-offset:-2px}
+  .row-title{font:600 15px/1.25 var(--slab);display:flex;gap:8px;align-items:baseline}
+  .row-title .pin{width:8px;height:8px;border-radius:50%;flex:none;position:relative;top:-1px}
+  .row-meta{font-size:13px;color:var(--ink-2);margin-top:2px;padding-left:16px}
+  .row-meta .no-text{color:#9A8C76}
+
+  /* ---------- the sign board ---------- */
+  #detail{position:absolute;inset:0;display:none;flex-direction:column;background:var(--paper)}
+  #detail.open{display:flex}
+  .back{
+    all:unset;cursor:pointer;font:600 14px var(--sans);color:var(--ink-2);padding:14px 20px 10px;display:flex;gap:6px;align-items:center
+  }
+  .back:hover{color:var(--ink)}
+  .back:focus-visible{outline:2px solid var(--focus)}
+  .board-wrap{flex:1;overflow:auto;padding:0 14px 24px}
+  .board{
+    background:linear-gradient(180deg,var(--board) 0%,var(--board-deep) 100%);
+    border-top:10px solid var(--rail);
+    border-radius:4px;padding:22px 22px 26px;color:var(--letter);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 18px 30px -18px rgba(30,18,6,.7);
+  }
+  .board .state{font:600 13px var(--sans);color:var(--letter-dim);letter-spacing:.02em;margin:0 0 6px}
+  .board h2{font:700 24px/1.15 var(--slab);margin:0 0 4px;color:#F3E6C4}
+  .board .sub{font:italic 400 16px var(--slab);color:var(--letter-dim);margin:0 0 14px}
+  .board .text{font:400 16.5px/1.6 var(--slab);white-space:pre-line;margin:0}
+  .board .pending{
+    font:400 15px/1.5 var(--slab);color:var(--letter-dim);border:1px dashed var(--rail);border-radius:4px;padding:12px 14px
+  }
+  .board .pending a{color:var(--letter)}
+  .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+  .actions button,.actions a{
+    all:unset;cursor:pointer;font:600 14px var(--sans);padding:8px 12px;border-radius:6px;
+    border:1px solid var(--rail);color:var(--letter);display:inline-flex;align-items:center;gap:6px
+  }
+  .actions button:hover,.actions a:hover{background:rgba(255,255,255,.06)}
+  .actions button:focus-visible,.actions a:focus-visible{outline:2px solid var(--focus)}
+  .actions button[aria-pressed=true]{background:var(--letter);color:var(--board)}
+  .facts{margin:16px 2px 0;font-size:13.5px;color:var(--ink-2);line-height:1.5}
+  .facts b{color:var(--ink);font-weight:600}
+  .facts a{color:var(--ink)}
+
+  /* ---------- footer ---------- */
+  footer{padding:10px 20px 12px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-2);line-height:1.45}
+  footer a{color:var(--ink)}
+
+  /* ---------- map markers ---------- */
+  .maplibregl-popup-content{font-family:var(--sans);padding:8px 10px;border-radius:6px}
+  .maplibregl-popup-content b{font:600 14px var(--slab)}
+
+  /* ---------- mobile: bottom sheet ---------- */
+  #handle{display:none}
+  @media (max-width:760px){
+    :root{--panel-w:100%}
+    #panel{
+      top:auto;left:0;right:0;bottom:0;height:46vh;border-right:0;border-top:1px solid var(--line);
+      border-radius:14px 14px 0 0;transition:height .25s ease;padding-bottom:env(safe-area-inset-bottom,0px)
+    }
+    #panel.tall{height:88vh}
+    #handle{display:block;width:44px;height:5px;border-radius:3px;background:var(--line);margin:8px auto 0}
+    header{padding:8px 18px 10px}
+    header p{display:none}
+    .board-wrap{padding:0 12px 20px}
+  }
+  @media (prefers-reduced-motion:reduce){#panel{transition:none}}
+</style>
+</head>
+<body>
+<div id="map" role="application" aria-label="Map of roadside markers"></div>
+
+<aside id="panel" aria-label="Marker list">
+  <div id="handle" aria-hidden="true"></div>
+  <header>
+    <h1>Roadside</h1>
+    <p>Every official highway marker in Montana and Idaho — the sign text, where the state publishes it, so you don't have to pull over.</p>
+  </header>
+
+  <div class="tools">
+    <input id="q" type="search" placeholder="Search titles and sign text" aria-label="Search markers">
+    <div class="chips" role="group" aria-label="Filters">
+      <button class="chip" data-f="state" data-v="MT" aria-pressed="true"><span class="dot" style="background:var(--mt)"></span>Montana</button>
+      <button class="chip" data-f="state" data-v="ID" aria-pressed="true"><span class="dot" style="background:var(--id)"></span>Idaho</button>
+      <button class="chip" data-f="text" data-v="1" aria-pressed="false">Has sign text</button>
+      <button class="chip" data-f="active" data-v="1" aria-pressed="true">Still standing</button>
+    </div>
+  </div>
+  <div class="count" id="count">Loading markers…</div>
+  <ul id="list"></ul>
+
+  <footer>
+    Data: <a href="https://gis-mdt.hub.arcgis.com/" target="_blank" rel="noopener">Montana DOT</a> and
+    <a href="https://idaho-highway-historical-markers-iplan.hub.arcgis.com/" target="_blank" rel="noopener">Idaho ITD / State Historical Society</a>.
+    Compilation CC&nbsp;BY&nbsp;4.0, code MIT.
+    <a href="dist/roadside-markers.gpx" download>GPX</a> · <a href="dist/roadside-markers.kml" download>KML</a> ·
+    <a href="data/markers.geojson" download>GeoJSON</a> · <a href="https://github.com/itogeo/roadside" target="_blank" rel="noopener">Source</a> ·
+    <a href="https://www.buymeacoffee.com/itogeo" target="_blank" rel="noopener">Buy me a coffee</a>
+    <br>An open-source project by <a href="https://itogeo.com" target="_blank" rel="noopener">Ito Geospatial</a>.
+    <br><a id="add-marker" href="#" target="_blank" rel="noopener">Add a missing marker</a> · <a id="add-state" href="#" target="_blank" rel="noopener">Add your state</a>
+  </footer>
+
+  <section id="detail" aria-live="polite">
+    <button class="back" id="back">‹ All markers</button>
+    <div class="board-wrap">
+      <article class="board" id="board"></article>
+      <div class="facts" id="facts"></div>
+    </div>
+  </section>
+</aside>
+
+<script>
+(async function(){
+  const REPO = 'itogeo/roadside';   // drives every contribute link
+  const issueUrl = (tpl, p, lat, lon) => `https://github.com/${REPO}/issues/new?template=${tpl}.yml&title=${encodeURIComponent((tpl==='fix-marker'?'Fix: ':'Add: ')+(p?.title||''))}&marker_id=${encodeURIComponent(p?.id||'')}&coords=${lat!==undefined?lat.toFixed(5)+', '+lon.toFixed(5):''}`;
+  document.getElementById('add-marker').href = `https://github.com/${REPO}/issues/new?template=add-marker.yml`;
+  document.getElementById('add-state').href = `https://github.com/${REPO}/issues/new?template=add-state.yml`;
+  const COLORS = {MT:getComputedStyle(document.documentElement).getPropertyValue('--mt').trim(),
+                  ID:getComputedStyle(document.documentElement).getPropertyValue('--id').trim()};
+  const filters = {state:new Set(['MT','ID']), text:false, active:true};
+  const $ = s => document.querySelector(s);
+  const list = $('#list'), count = $('#count'), detail = $('#detail'), board = $('#board'), facts = $('#facts');
+  let data, visible = [], byId = new Map(), map, speaking = null;
+
+  // ----- map -----
+  // Self-contained basemap: US Census boundaries + highways tiled into site/tiles/basemap.pmtiles (12 MB, public domain).
+  // MapLibre reads it by HTTP range requests straight from wherever this folder is hosted — no tile server, no key.
+  maplibregl.addProtocol('pmtiles', new pmtiles.Protocol().tile);
+  const base = new URL('.', location.href).href;
+  const style = {
+    version: 8,
+    glyphs: base + 'fonts/{fontstack}/{range}.pbf',
+    sources: { census: { type:'vector', url:'pmtiles://' + base + 'tiles/basemap.pmtiles', attribution:'Boundaries & roads: US Census Bureau' } },
+    layers: [
+      { id:'bg', type:'background', paint:{ 'background-color':'#E9E4D6' } },
+      { id:'state-fill', type:'fill', source:'census', 'source-layer':'state', paint:{ 'fill-color':'#F5F1E6' } },
+      { id:'county-line', type:'line', source:'census', 'source-layer':'county', minzoom:5, paint:{ 'line-color':'#D5CDB9', 'line-width':['interpolate',['linear'],['zoom'],5,.4,10,1] } },
+      { id:'state-line', type:'line', source:'census', 'source-layer':'state', paint:{ 'line-color':'#A89C82', 'line-width':['interpolate',['linear'],['zoom'],3,.8,10,2] } },
+      { id:'road-state', type:'line', source:'census', 'source-layer':'road', filter:['==',['get','cls'],'state'], paint:{ 'line-color':'#D9CFB6', 'line-width':['interpolate',['linear'],['zoom'],7,.6,10,1.6] } },
+      { id:'road-us', type:'line', source:'census', 'source-layer':'road', filter:['==',['get','cls'],'us'], paint:{ 'line-color':'#C9B48E', 'line-width':['interpolate',['linear'],['zoom'],5,.7,10,2.2] } },
+      { id:'road-i', type:'line', source:'census', 'source-layer':'road', filter:['==',['get','cls'],'interstate'], paint:{ 'line-color':'#B8975E', 'line-width':['interpolate',['linear'],['zoom'],3,.8,10,3] } },
+      { id:'road-label', type:'symbol', source:'census', 'source-layer':'road', minzoom:7, filter:['!=',['get','cls'],'state'],
+        layout:{ 'symbol-placement':'line', 'text-field':['get','name'], 'text-font':['Noto Sans Regular'], 'text-size':11 },
+        paint:{ 'text-color':'#7A6A4E', 'text-halo-color':'#F5F1E6', 'text-halo-width':1.2 } },
+      { id:'place-label', type:'symbol', source:'census', 'source-layer':'place',
+        layout:{ 'text-field':['get','name'], 'text-font':['Noto Sans Regular'], 'text-size':['match',['get','rank'],1,15,2,13,3,11.5,10.5], 'symbol-sort-key':['get','rank'], 'text-variable-anchor':['top','bottom','left','right'], 'text-radial-offset':.4 },
+        paint:{ 'text-color':'#4A3F30', 'text-halo-color':'#F5F1E6', 'text-halo-width':1.4 } },
+      { id:'state-label', type:'symbol', source:'census', 'source-layer':'state', maxzoom:6,
+        layout:{ 'text-field':['upcase',['get','name']], 'text-font':['Noto Sans Regular'], 'text-size':13, 'text-letter-spacing':.15 },
+        paint:{ 'text-color':'#8E8068', 'text-halo-color':'#F5F1E6', 'text-halo-width':1 } }
+    ]
+  };
+  map = new maplibregl.Map({ container:'map', style, center:[-112.9,45.6], zoom:5.4, minZoom:2, attributionControl:{compact:true} });
+  map.addControl(new maplibregl.NavigationControl({showCompass:false}), 'top-right');
+  map.addControl(new maplibregl.GeolocateControl({positionOptions:{enableHighAccuracy:true},trackUserLocation:true}), 'top-right');
+
+  const res = await fetch('data/markers.geojson');
+  data = await res.json();
+  data.features.forEach(f => byId.set(f.properties.id, f));
+
+  map.on('load', () => {
+    map.addSource('markers', {type:'geojson', data, cluster:true, clusterRadius:38, clusterMaxZoom:9, promoteId:'id'});
+    map.addLayer({id:'clusters', type:'circle', source:'markers', filter:['has','point_count'],
+      paint:{'circle-color':'#3F2814','circle-opacity':.85,
+             'circle-radius':['step',['get','point_count'],14,20,18,60,24],
+             'circle-stroke-width':2,'circle-stroke-color':'#EAD8AE'}});
+    map.addLayer({id:'cluster-count', type:'symbol', source:'markers', filter:['has','point_count'],
+      layout:{'text-field':['get','point_count_abbreviated'],'text-size':12,'text-font':['Noto Sans Regular']},
+      paint:{'text-color':'#EAD8AE'}});
+    map.addLayer({id:'points', type:'circle', source:'markers', filter:['!',['has','point_count']],
+      paint:{'circle-color':['match',['get','state'],'MT',COLORS.MT,COLORS.ID],
+             'circle-radius':['interpolate',['linear'],['zoom'],5,4,10,7],
+             'circle-opacity':['case',['boolean',['get','has_text'],false],1,.55],
+             'circle-stroke-width':1.5,'circle-stroke-color':'#FAF8F3'}});
+    map.on('click','clusters', e => {
+      const f = map.queryRenderedFeatures(e.point,{layers:['clusters']})[0];
+      map.getSource('markers').getClusterExpansionZoom(f.properties.cluster_id, (err,z) => {
+        if(!err) map.easeTo({center:f.geometry.coordinates, zoom:z});
+      });
+    });
+    map.on('click','points', e => open(e.features[0].properties.id, false));
+    for(const l of ['clusters','points']){
+      map.on('mouseenter', l, () => map.getCanvas().style.cursor='pointer');
+      map.on('mouseleave', l, () => map.getCanvas().style.cursor='');
+    }
+    const popup = new maplibregl.Popup({closeButton:false, closeOnClick:false, offset:10});
+    map.on('mousemove','points', e => {
+      const p = e.features[0].properties;
+      popup.setLngLat(e.features[0].geometry.coordinates).setHTML(`<b>${esc(p.title)}</b>`).addTo(map);
+    });
+    map.on('mouseleave','points', () => popup.remove());
+    applyFilters();
+    if(location.hash.length > 1) open(decodeURIComponent(location.hash.slice(1)), true);
+  });
+
+  // ----- filtering + list -----
+  function matches(p, q){
+    if(!filters.state.has(p.state)) return false;
+    if(filters.active && p.status === 'removed') return false;
+    if(filters.text && !p.text) return false;
+    if(q){ const hay = (p.title+' '+(p.subtitle||'')+' '+(p.text||'')+' '+(p.county||'')).toLowerCase(); if(!hay.includes(q)) return false; }
+    return true;
+  }
+  function applyFilters(){
+    const q = $('#q').value.trim().toLowerCase();
+    visible = data.features.filter(f => matches(f.properties, q));
+    const fc = {type:'FeatureCollection', features:visible.map(f => ({...f, properties:{...f.properties, has_text:!!f.properties.text}}))};
+    if(map.getSource('markers')) map.getSource('markers').setData(fc);
+    const sorted = [...visible].sort((a,b)=> a.properties.title.localeCompare(b.properties.title));
+    list.innerHTML = sorted.map(f => {
+      const p = f.properties;
+      const meta = p.text ? [p.topic, p.county ? p.county + ' County' : null].filter(Boolean).join(' · ')
+                          : `<span class="no-text">Sign text not yet published by the state</span>`;
+      return `<li><button data-id="${esc(p.id)}">
+        <div class="row-title"><span class="pin" style="background:${COLORS[p.state]}"></span>${esc(p.title)}</div>
+        <div class="row-meta">${meta}</div></button></li>`;
+    }).join('');
+    const withText = visible.filter(f => f.properties.text).length;
+    count.textContent = `${visible.length} markers · ${withText} with sign text`;
+  }
+  $('#q').addEventListener('input', applyFilters);
+  document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
+    const on = c.getAttribute('aria-pressed') !== 'true';
+    c.setAttribute('aria-pressed', on);
+    if(c.dataset.f === 'state'){ on ? filters.state.add(c.dataset.v) : filters.state.delete(c.dataset.v); }
+    else filters[c.dataset.f] = on;
+    applyFilters();
+  }));
+  list.addEventListener('click', e => { const b = e.target.closest('button[data-id]'); if(b) open(b.dataset.id, true); });
+
+  // ----- detail -----
+  function open(id, fly){
+    const f = byId.get(id); if(!f) return;
+    const p = f.properties, [lon, lat] = f.geometry.coordinates;
+    stopSpeaking();
+    const stateName = p.state === 'MT' ? 'Montana' : 'Idaho';
+    board.innerHTML = `
+      <p class="state">${stateName} highway marker${p.route ? ' · ' + esc(p.route) + (p.milepost ? ' MP ' + esc(p.milepost) : '') : ''}</p>
+      <h2>${esc(p.title)}</h2>
+      ${p.subtitle ? `<p class="sub">${esc(p.subtitle)}</p>` : ''}
+      ${p.text ? `<p class="text">${esc(p.text)}</p>`
+               : `<div class="pending">This sign's text hasn't been published online by ${stateName} yet. It's in the dataset as a location and title so it can be filled in from the agency or a photo of the sign.
+                  ${p.state==='MT' ? `<br><br><a href="https://www.hmdb.org/results.asp?Search=Keyword&SearchFor=${encodeURIComponent(p.title)}&State=Montana" target="_blank" rel="noopener">Look it up on HMdb</a>` : ''}</div>`}
+      <div class="actions">
+        ${p.text ? `<button id="speak" aria-pressed="false">▶ Read aloud</button>` : ''}
+        <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}" target="_blank" rel="noopener">Directions</a>
+        ${p.sign_pdf ? `<a href="${esc(absolute(p.sign_pdf))}" target="_blank" rel="noopener">Sign PDF</a>` : ''}
+        <button id="share">Copy link</button>
+        <a href="${issueUrl('fix-marker', p, lat, lon)}" target="_blank" rel="noopener">Fix this entry</a>
+      </div>`;
+    facts.innerHTML = `
+      <b>${esc(p.topic||'')}</b>${p.status ? ' · ' + esc(p.status) : ''}${p.location_note ? '<br>' + esc(p.location_note) : ''}
+      <br>${lat.toFixed(5)}, ${lon.toFixed(5)}
+      <br>Source: <a href="${esc(p.source_url)}" target="_blank" rel="noopener">${esc(p.source_agency)}</a> (#${esc(p.source_id)})`;
+    detail.classList.add('open');
+    $('#panel').classList.add('tall');
+    history.replaceState(null, '', '#' + encodeURIComponent(id));
+    if(fly) map.flyTo({center:[lon, lat], zoom:Math.max(map.getZoom(), 10), speed:1.2});
+    const sp = $('#speak'); if(sp) sp.addEventListener('click', () => toggleSpeak(p, sp));
+    $('#share').addEventListener('click', async e => { await navigator.clipboard?.writeText(location.href); e.target.textContent = 'Link copied'; });
+    $('#back').focus();
+  }
+  $('#back').addEventListener('click', () => { detail.classList.remove('open'); stopSpeaking(); history.replaceState(null,'',' '); });
+  $('#handle').addEventListener('click', () => $('#panel').classList.toggle('tall'));
+
+  // ----- read aloud (Web Speech; the v2 proximity mode will build on this) -----
+  function toggleSpeak(p, btn){
+    if(speaking){ stopSpeaking(); return; }
+    if(!('speechSynthesis' in window)){ btn.textContent = 'No speech on this device'; return; }
+    const u = new SpeechSynthesisUtterance(`${p.title}. ${p.subtitle ? p.subtitle + '. ' : ''}${p.text}`);
+    u.rate = 0.98; u.onend = u.onerror = () => { speaking = null; btn.setAttribute('aria-pressed','false'); btn.textContent = '▶ Read aloud'; };
+    speaking = u; btn.setAttribute('aria-pressed','true'); btn.textContent = '■ Stop';
+    speechSynthesis.cancel(); speechSynthesis.speak(u);
+  }
+  function stopSpeaking(){ if(speaking){ speechSynthesis.cancel(); speaking = null; } }
+
+  function esc(s){ return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+  function absolute(u){ return u.startsWith('http') ? u : 'https://www.mdt.mt.gov/travinfo/' + u.replace(/^\/+/, ''); }
+})();
+</script>
+</body>
+</html>
