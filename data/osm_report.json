@@ -1,0 +1,16 @@
+{
+  "MT": {
+    "osm_nodes": 187,
+    "kept": 126,
+    "dropped_as_duplicate_of_official": 28,
+    "kept_without_sign_text": 116,
+    "kept_with_community_text": 10
+  },
+  "ID": {
+    "osm_nodes": 145,
+    "kept": 52,
+    "dropped_as_duplicate_of_official": 10,
+    "kept_without_sign_text": 44,
+    "kept_with_community_text": 8
+  }
+}
