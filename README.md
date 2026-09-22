@@ -28,14 +28,16 @@ site/fonts/                 Self-hosted glyphs for map labels.
 
 ## Sources (v0.1)
 
-| State | Locations + titles | Sign text | Where it comes from |
-|---|---|---|---|
-| Montana | 356 markers | 59 (the geologic series) | MDT `Historical_Highway_Marker` feature service; text scraped from `mdt.mt.gov/travinfo/geomarkers.aspx` |
-| Idaho | 317 markers (281 standing) | 316 | ITD `HistoricalMarkerSigns_ViewLayer` feature service (`MainText` field), run with the Idaho State Historical Society |
+| State | Locations + titles | Sign text | Sign photo | Where it comes from |
+|---|---|---|---|---|
+| Montana | 356 markers | 59 (the geologic series) | **340** | MDT `Historical_Highway_Marker` feature service; text scraped from `mdt.mt.gov/travinfo/geomarkers.aspx`; photographs hotlinked from the same service's attachments |
+| Idaho | 317 markers (281 standing) | 316 | — | ITD `HistoricalMarkerSigns_ViewLayer` feature service (`MainText` field), run with the Idaho State Historical Society |
 
-Montana's *historical* marker texts are not published online by MDT — they exist in the Montana Historical
-Society's book *Montana's Historical Highway Markers* and on HMdb.org. Those records are in the dataset with
-`text_status: "pending"` and a title/location, so they can be filled in once MDT/MHS share the text.
+Montana's *historical* marker texts are not published by MDT as data — but MDT photographed the signs, and
+serves the JPEGs as attachments on the same feature service. 340 of 356 Montana markers have one, including
+282 of the markers with no transcribed text, and they are close enough to read. The site shows the photograph,
+which is the sign's exact wording with no transcription step to get wrong. Those records keep
+`text_status: "pending"` so the text can still be filled in from MDT/MHS later.
 Robert Fletcher's original 1938 booklet *Montana Highway Historical Markers* may be public domain
 (US works from 1930–1963 needed renewal); worth checking the Stanford Copyright Renewal Database before
 transcribing the surviving Fletcher-era signs from it.

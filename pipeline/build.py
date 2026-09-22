@@ -255,11 +255,37 @@ def apply_contributions(feats: list[dict]) -> list[dict]:
     return feats
 
 
+def apply_sign_photos(feats: list[dict]) -> list[dict]:
+    """Stamp MDT's photographs of the Montana signs onto the features, from the index that
+    pipeline/sign_photos.py builds. Without this a rebuild would silently drop the photos, which for
+    the ~282 Montana markers whose text the state never published are the only readable content."""
+    idx_path = DATA / "sign_photos.json"
+    if not idx_path.exists():
+        print("sign photos: no data/sign_photos.json — run pipeline/sign_photos.py")
+        return feats
+    idx = json.loads(idx_path.read_text())
+    photos, credit, lic = idx["photos"], idx.get("credit"), idx.get("license")
+    n = 0
+    for f in feats:
+        p = f["properties"]
+        if p.get("state") != "MT":
+            continue
+        rec = photos.get(str(p.get("source_id")))
+        if not rec:
+            continue
+        p["image_url"], p["image_credit"], p["image_license"] = rec["url"], credit, lic
+        p["image_count"] = rec.get("count")
+        n += 1
+    print(f"sign photos: {n} Montana markers carry a photograph of the sign")
+    return feats
+
+
 def main() -> None:
     feats = build_montana() + build_idaho()
     for cfg_path in sorted((ROOT / "pipeline" / "sources").glob("*.json")):
         feats += build_generic(json.loads(cfg_path.read_text()))
     feats = apply_contributions(feats)
+    feats = apply_sign_photos(feats)
     gj = {"type": "FeatureCollection",
           "name": "roadside-markers",
           "license": "CC BY 4.0 (compilation). Marker texts © their issuing agency; see text_source.",
@@ -280,6 +306,8 @@ def main() -> None:
         s = [f["properties"] for f in feats if f["properties"]["state"] == st]
         rep[st] = {"markers": len(s), "active": sum(1 for p in s if p["status"] != "removed"),
                    "with_official_text": sum(1 for p in s if p["text"]),
+                   "with_sign_photo": sum(1 for p in s if p.get("image_url")),
+                   "readable": sum(1 for p in s if p["text"] or p.get("image_url")),
                    "topics": sorted({p["topic"] for p in s if p["topic"]})}
     (DATA / "build_report.json").write_text(json.dumps(rep, indent=2))
     print(json.dumps(rep, indent=2))

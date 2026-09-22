@@ -13,13 +13,15 @@ Live and working, two states. Verified on the deployed site: page, `markers.geoj
 (HTTP 206 range requests confirmed — PMTiles needs them and GitHub Pages does serve them), glyph
 fonts, and the GPX/KML downloads all return 200.
 
-| | Markers | Standing | With sign text |
-|---|---|---|---|
-| Montana | 356 | 356 | 59 |
-| Idaho | 317 | 281 | 316 |
-| **Total** | **673** | **637** | **375** |
+| | Markers | Standing | With sign text | With sign photo | **Readable** |
+|---|---|---|---|---|---|
+| Montana | 356 | 356 | 59 | 340 | **341 (96%)** |
+| Idaho | 317 | 281 | 316 | — | **316 (>99%)** |
+| **Total** | **673** | **637** | **375** | **340** | **657 (98%)** |
 
-## The real gap: Montana sign text
+"Readable" = you can read what the sign says, from text or photograph.
+
+## Montana sign text — solved by photograph (2026-09-22)
 
 83% of Montana markers show a title and nothing else. This is not an engineering problem — MDT's
 `Historical_Highway_Marker` feature service has **no text field at all** (schema checked 2026-09-22:
@@ -62,8 +64,15 @@ Sizing, measured on a real marker photo (legibility confirmed by eye at each siz
 
 1280 px is legible and is the recommended cache size. Hotlinking the 3 MB originals is the
 zero-storage option but is the wrong call for a site whose whole point is roadside use on a weak
-signal. Open questions before building this: confirm reuse terms with MDT, and decide whether ~67 MB
-of JPEGs belongs in git history or in a release asset / separate branch.
+signal. **Built and live** — `pipeline/sign_photos.py`, hotlinked rather than cached. The service sends
+permissive CORS, nothing is stored in this repo, and the browser fetches from MDT exactly as it
+would by following a link, so no question of redistributing MDT's photographs arises. Photos are
+lazy-loaded, so a 3-5 MB original is only fetched when someone opens that marker.
+
+Still open: MDT publishes no explicit reuse licence (the service's `copyrightText` is just the
+agency name), so the caption credits them by name. Worth confirming with MDT. If the originals ever
+prove too heavy in practice, the measured fallback is a 1280 px WebP cache at ~200 KB each, ~67 MB
+for all 341 — but that reopens the redistribution question that hotlinking avoids.
 
 Other text routes, now secondary:
 1. Ask Montana Historical Society for the marker texts as data (they hold

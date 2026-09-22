@@ -102,6 +102,13 @@
   .actions button:hover,.actions a:hover{background:rgba(255,255,255,.06)}
   .actions button:focus-visible,.actions a:focus-visible{outline:2px solid var(--focus)}
   .actions button[aria-pressed=true]{background:var(--letter);color:var(--board)}
+  /* the photograph of the sign: for markers whose text the state never published as data,
+     this IS the content — it is the sign's exact wording, with no transcription in between */
+  .signshot{margin:16px 0 0;padding:0}
+  .signshot a{display:block;border-radius:6px;overflow:hidden;background:#2C1B0D;line-height:0}
+  .signshot a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+  .signshot img{width:100%;height:auto;display:block;min-height:120px}
+  .signshot figcaption{font:400 12.5px var(--sans);color:var(--letter-dim);margin-top:7px;line-height:1.45}
   .facts{margin:16px 2px 0;font-size:13.5px;color:var(--ink-2);line-height:1.5}
   .facts b{color:var(--ink);font-weight:600}
   .facts a{color:var(--ink)}
@@ -304,8 +311,15 @@
       <h2>${esc(p.title)}</h2>
       ${p.subtitle ? `<p class="sub">${esc(p.subtitle)}</p>` : ''}
       ${p.text ? `<p class="text">${esc(p.text)}</p>`
-               : `<div class="pending">This sign's text hasn't been published online by ${stateName} yet. It's in the dataset as a location and title so it can be filled in from the agency or a photo of the sign.
-                  ${p.state==='MT' ? `<br><br><a href="https://www.hmdb.org/results.asp?Search=Keyword&SearchFor=${encodeURIComponent(p.title)}&State=Montana" target="_blank" rel="noopener">Look it up on HMdb</a>` : ''}</div>`}
+               : p.image_url ? `<div class="pending">${stateName} hasn't published this sign's text as data — but MDT photographed the sign. Read it below: that is the sign's exact wording, not a transcription.</div>`
+               : `<div class="pending">This sign's text hasn't been published online by ${stateName} yet. It's in the dataset as a location and title so it can be filled in from the agency or a photo of the sign.</div>`}
+      ${p.image_url ? `
+      <figure class="signshot">
+        <a href="${esc(p.image_url)}" target="_blank" rel="noopener" aria-label="Open the full-size photograph of this sign">
+          <img src="${esc(p.image_url)}" alt="Photograph of the ${esc(p.title)} roadside sign" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Photograph: ${esc(p.image_credit || '')}${p.image_count > 1 ? ` · ${p.image_count} on file` : ''} · tap to open full size</figcaption>
+      </figure>` : ''}
       <div class="actions">
         ${p.text ? `<button id="speak" aria-pressed="false">▶ Read aloud</button>` : ''}
         <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}" target="_blank" rel="noopener">Directions</a>

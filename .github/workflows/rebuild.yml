@@ -25,6 +25,8 @@ jobs:
           path: /tmp/base
           key: basemap-census-2023
       - run: |
+          # refresh MDT's sign photographs first: build.py stamps them onto the features
+          python pipeline/sign_photos.py
           python pipeline/build.py
           python pipeline/enrich_county.py
           python pipeline/export_poi.py

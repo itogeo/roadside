@@ -1,0 +1,2048 @@
+{
+  "source": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0",
+  "credit": "Montana Department of Transportation",
+  "license": "\u00a9 Montana Department of Transportation \u2014 hotlinked from the MDT feature service",
+  "generated": "2026-09-22",
+  "photos": {
+    "1": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/1/attachments/27",
+      "name": "Photo1.jpg",
+      "size": 2802050,
+      "count": 2
+    },
+    "2": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/2/attachments/412",
+      "name": "Photo 1.jpg",
+      "size": 4074817,
+      "count": 1
+    },
+    "3": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/3/attachments/713",
+      "name": "Photo 1.jpg",
+      "size": 3778028,
+      "count": 3
+    },
+    "4": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/4/attachments/388",
+      "name": "Photo 1.jpg",
+      "size": 3749257,
+      "count": 3
+    },
+    "5": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/5/attachments/700",
+      "name": "Photo 1.jpg",
+      "size": 3448560,
+      "count": 3
+    },
+    "6": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/6/attachments/428",
+      "name": "Photo 1.jpg",
+      "size": 3348362,
+      "count": 3
+    },
+    "7": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/7/attachments/722",
+      "name": "Photo 1.jpg",
+      "size": 3165370,
+      "count": 3
+    },
+    "9": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/9/attachments/802",
+      "name": "Photo 1.jpg",
+      "size": 3532389,
+      "count": 3
+    },
+    "10": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/10/attachments/393",
+      "name": "Photo 1.jpg",
+      "size": 4485855,
+      "count": 3
+    },
+    "11": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/11/attachments/198",
+      "name": "Photo 1.jpg",
+      "size": 4022337,
+      "count": 3
+    },
+    "12": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/12/attachments/874",
+      "name": "Photo+1 (1).jpg",
+      "size": 476960,
+      "count": 3
+    },
+    "15": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/15/attachments/659",
+      "name": "Photo 1.jpg",
+      "size": 5218121,
+      "count": 3
+    },
+    "16": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/16/attachments/525",
+      "name": "BozemanPassWB.jpg",
+      "size": 3033893,
+      "count": 1
+    },
+    "18": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/18/attachments/767",
+      "name": "Photo 1.jpg",
+      "size": 4031978,
+      "count": 3
+    },
+    "19": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/19/attachments/549",
+      "name": "HCF_1.jpg",
+      "size": 3994349,
+      "count": 3
+    },
+    "20": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/20/attachments/382",
+      "name": "Photo 1.jpg",
+      "size": 5467834,
+      "count": 3
+    },
+    "21": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/21/attachments/744",
+      "name": "Photo 1.jpg",
+      "size": 4192896,
+      "count": 3
+    },
+    "22": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/22/attachments/215",
+      "name": "Photo 1.jpg",
+      "size": 3916191,
+      "count": 2
+    },
+    "23": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/23/attachments/505",
+      "name": "Photo 1.jpg",
+      "size": 4553703,
+      "count": 2
+    },
+    "24": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/24/attachments/585",
+      "name": "Photo 1.jpg",
+      "size": 5201781,
+      "count": 3
+    },
+    "25": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/25/attachments/63",
+      "name": "Photo1.jpg",
+      "size": 2491430,
+      "count": 1
+    },
+    "26": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/26/attachments/353",
+      "name": "Photo 1.jpg",
+      "size": 3601517,
+      "count": 3
+    },
+    "27": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/27/attachments/271",
+      "name": "Photo 1.jpg",
+      "size": 3402219,
+      "count": 3
+    },
+    "28": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/28/attachments/265",
+      "name": "Photo1.jpg",
+      "size": 1262667,
+      "count": 2
+    },
+    "29": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/29/attachments/30",
+      "name": "Photo1.jpg",
+      "size": 2165115,
+      "count": 3
+    },
+    "30": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/30/attachments/548",
+      "name": "Photo 1.jpg",
+      "size": 4799950,
+      "count": 2
+    },
+    "31": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/31/attachments/370",
+      "name": "Photo 1.jpg",
+      "size": 4476207,
+      "count": 3
+    },
+    "32": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/32/attachments/448",
+      "name": "Photo 1.jpg",
+      "size": 3032419,
+      "count": 3
+    },
+    "33": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/33/attachments/357",
+      "name": "Photo 1.jpg",
+      "size": 3839180,
+      "count": 3
+    },
+    "35": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/35/attachments/825",
+      "name": "Photo 1.jpg",
+      "size": 7582103,
+      "count": 1
+    },
+    "36": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/36/attachments/153",
+      "name": "Photo1.jpg",
+      "size": 1055642,
+      "count": 2
+    },
+    "37": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/37/attachments/510",
+      "name": "Photo 1.jpg",
+      "size": 2788852,
+      "count": 3
+    },
+    "38": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/38/attachments/311",
+      "name": "Photo 1.jpg",
+      "size": 2964829,
+      "count": 3
+    },
+    "39": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/39/attachments/455",
+      "name": "Photo 1.jpg",
+      "size": 3308453,
+      "count": 3
+    },
+    "40": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/40/attachments/95",
+      "name": "Photo1.jpg",
+      "size": 617711,
+      "count": 2
+    },
+    "42": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/42/attachments/706",
+      "name": "Photo 1.jpg",
+      "size": 4287279,
+      "count": 3
+    },
+    "43": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/43/attachments/571",
+      "name": "Photo 1.jpg",
+      "size": 3250302,
+      "count": 2
+    },
+    "45": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/45/attachments/109",
+      "name": "Photo1.jpg",
+      "size": 1949582,
+      "count": 3
+    },
+    "46": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/46/attachments/709",
+      "name": "Photo 1.jpg",
+      "size": 3870503,
+      "count": 3
+    },
+    "47": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/47/attachments/678",
+      "name": "Photo 1.jpg",
+      "size": 3794611,
+      "count": 1
+    },
+    "48": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/48/attachments/421",
+      "name": "Photo 1.jpg",
+      "size": 4719098,
+      "count": 3
+    },
+    "49": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/49/attachments/868",
+      "name": "Photo 1.jpg",
+      "size": 4094140,
+      "count": 3
+    },
+    "51": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/51/attachments/683",
+      "name": "Photo 1.jpg",
+      "size": 4182424,
+      "count": 1
+    },
+    "52": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/52/attachments/115",
+      "name": "Photo1.jpg",
+      "size": 2260021,
+      "count": 2
+    },
+    "53": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/53/attachments/399",
+      "name": "Photo 1.jpg",
+      "size": 4962647,
+      "count": 3
+    },
+    "54": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/54/attachments/610",
+      "name": "Photo 1.jpg",
+      "size": 2498547,
+      "count": 3
+    },
+    "55": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/55/attachments/33",
+      "name": "Photo1.jpg",
+      "size": 2135860,
+      "count": 2
+    },
+    "56": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/56/attachments/228",
+      "name": "Photo1.jpg",
+      "size": 569677,
+      "count": 2
+    },
+    "58": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/58/attachments/365",
+      "name": "Photo 1.jpg",
+      "size": 3717327,
+      "count": 3
+    },
+    "59": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/59/attachments/543",
+      "name": "Photo 1.jpg",
+      "size": 633108,
+      "count": 3
+    },
+    "60": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/60/attachments/67",
+      "name": "Photo9.jpg",
+      "size": 2411169,
+      "count": 1
+    },
+    "61": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/61/attachments/336",
+      "name": "Photo 1.jpg",
+      "size": 4494337,
+      "count": 3
+    },
+    "62": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/62/attachments/646",
+      "name": "Photo 1.jpg",
+      "size": 3779473,
+      "count": 3
+    },
+    "63": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/63/attachments/866",
+      "name": "Photo 1.jpg",
+      "size": 3067611,
+      "count": 3
+    },
+    "64": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/64/attachments/786",
+      "name": "Photo 1.jpg",
+      "size": 3590386,
+      "count": 3
+    },
+    "65": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/65/attachments/134",
+      "name": "Photo1.jpg",
+      "size": 2110802,
+      "count": 2
+    },
+    "66": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/66/attachments/667",
+      "name": "Photo 1.jpg",
+      "size": 4133429,
+      "count": 3
+    },
+    "67": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/67/attachments/617",
+      "name": "Photo 1.jpg",
+      "size": 3201317,
+      "count": 3
+    },
+    "68": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/68/attachments/385",
+      "name": "Photo 1.jpg",
+      "size": 3590128,
+      "count": 3
+    },
+    "70": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/70/attachments/600",
+      "name": "Photo 1.jpg",
+      "size": 3780821,
+      "count": 3
+    },
+    "71": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/71/attachments/60",
+      "name": "Photo1.jpg",
+      "size": 2227724,
+      "count": 3
+    },
+    "72": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/72/attachments/826",
+      "name": "Photo 1.jpg",
+      "size": 3325673,
+      "count": 3
+    },
+    "73": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/73/attachments/70",
+      "name": "Photo1.jpg",
+      "size": 2832197,
+      "count": 2
+    },
+    "75": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/75/attachments/294",
+      "name": "Photo1.jpg",
+      "size": 2188264,
+      "count": 1
+    },
+    "76": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/76/attachments/230",
+      "name": "Photo1.jpg",
+      "size": 587926,
+      "count": 2
+    },
+    "77": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/77/attachments/431",
+      "name": "Photo 1.jpg",
+      "size": 2516392,
+      "count": 3
+    },
+    "78": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/78/attachments/641",
+      "name": "Photo 1.jpg",
+      "size": 3356852,
+      "count": 3
+    },
+    "81": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/81/attachments/749",
+      "name": "Photo 1.jpg",
+      "size": 3648066,
+      "count": 3
+    },
+    "83": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/83/attachments/84",
+      "name": "Photo1.jpg",
+      "size": 2662756,
+      "count": 1
+    },
+    "84": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/84/attachments/72",
+      "name": "Photo1.jpg",
+      "size": 3031225,
+      "count": 2
+    },
+    "85": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/85/attachments/211",
+      "name": "Photo 1.jpg",
+      "size": 3946396,
+      "count": 3
+    },
+    "88": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/88/attachments/461",
+      "name": "Photo 1.jpg",
+      "size": 3653429,
+      "count": 3
+    },
+    "91": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/91/attachments/818",
+      "name": "Photo 1.jpg",
+      "size": 5120758,
+      "count": 3
+    },
+    "92": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/92/attachments/821",
+      "name": "Photo 1.jpg",
+      "size": 4376905,
+      "count": 3
+    },
+    "93": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/93/attachments/414",
+      "name": "Photo 1.jpg",
+      "size": 4020813,
+      "count": 3
+    },
+    "94": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/94/attachments/290",
+      "name": "Photo1.jpg",
+      "size": 2330005,
+      "count": 3
+    },
+    "96": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/96/attachments/464",
+      "name": "Photo 1.jpg",
+      "size": 3629294,
+      "count": 3
+    },
+    "97": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/97/attachments/23",
+      "name": "Photo1.jpg",
+      "size": 2544907,
+      "count": 2
+    },
+    "98": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/98/attachments/501",
+      "name": "Photo 1.jpg",
+      "size": 4614797,
+      "count": 2
+    },
+    "99": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/99/attachments/105",
+      "name": "Photo1.jpg",
+      "size": 2720438,
+      "count": 4
+    },
+    "101": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/101/attachments/68",
+      "name": "Photo18.jpg",
+      "size": 2784829,
+      "count": 2
+    },
+    "102": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/102/attachments/217",
+      "name": "Photo1.jpg",
+      "size": 2467931,
+      "count": 2
+    },
+    "103": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/103/attachments/307",
+      "name": "Photo 1.jpg",
+      "size": 6640971,
+      "count": 3
+    },
+    "104": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/104/attachments/588",
+      "name": "Photo 1.jpg",
+      "size": 3434615,
+      "count": 3
+    },
+    "105": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/105/attachments/443",
+      "name": "Photo 1.jpg",
+      "size": 3402913,
+      "count": 3
+    },
+    "106": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/106/attachments/339",
+      "name": "Photo 1.jpg",
+      "size": 4422927,
+      "count": 3
+    },
+    "107": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/107/attachments/697",
+      "name": "Photo 1.jpg",
+      "size": 3388225,
+      "count": 3
+    },
+    "108": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/108/attachments/45",
+      "name": "Photo1.jpg",
+      "size": 2288738,
+      "count": 2
+    },
+    "109": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/109/attachments/196",
+      "name": "Photo 1.jpg",
+      "size": 4615027,
+      "count": 1
+    },
+    "110": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/110/attachments/694",
+      "name": "Photo 1.jpg",
+      "size": 3621093,
+      "count": 4
+    },
+    "111": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/111/attachments/650",
+      "name": "Photo 1.jpg",
+      "size": 4011262,
+      "count": 3
+    },
+    "112": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/112/attachments/422",
+      "name": "Photo 1.jpg",
+      "size": 4670152,
+      "count": 2
+    },
+    "113": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/113/attachments/410",
+      "name": "Photo 1.jpg",
+      "size": 4102605,
+      "count": 3
+    },
+    "114": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/114/attachments/552",
+      "name": "Photo 1.jpg",
+      "size": 3580368,
+      "count": 3
+    },
+    "115": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/115/attachments/734",
+      "name": "Photo 1.jpg",
+      "size": 4027263,
+      "count": 3
+    },
+    "116": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/116/attachments/520",
+      "name": "Photo 1.jpg",
+      "size": 2877846,
+      "count": 3
+    },
+    "117": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/117/attachments/629",
+      "name": "Photo 1.jpg",
+      "size": 3493357,
+      "count": 3
+    },
+    "118": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/118/attachments/210",
+      "name": "Photo 1.jpg",
+      "size": 4035918,
+      "count": 3
+    },
+    "120": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/120/attachments/660",
+      "name": "Photo 1.jpg",
+      "size": 3819482,
+      "count": 3
+    },
+    "121": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/121/attachments/74",
+      "name": "Photo1.jpg",
+      "size": 2666676,
+      "count": 2
+    },
+    "122": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/122/attachments/88",
+      "name": "Photo1.jpg",
+      "size": 630489,
+      "count": 2
+    },
+    "123": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/123/attachments/507",
+      "name": "Photo 1.jpg",
+      "size": 4292892,
+      "count": 2
+    },
+    "124": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/124/attachments/580",
+      "name": "Photo 1.jpg",
+      "size": 562826,
+      "count": 3
+    },
+    "125": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/125/attachments/141",
+      "name": "Photo1.jpg",
+      "size": 1887370,
+      "count": 3
+    },
+    "126": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/126/attachments/369",
+      "name": "Photo 1.jpg",
+      "size": 4231660,
+      "count": 3
+    },
+    "127": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/127/attachments/293",
+      "name": "Photo1.jpg",
+      "size": 2347082,
+      "count": 1
+    },
+    "128": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/128/attachments/577",
+      "name": "Photo 1.jpg",
+      "size": 3693371,
+      "count": 3
+    },
+    "129": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/129/attachments/474",
+      "name": "Photo 1.jpg",
+      "size": 509699,
+      "count": 3
+    },
+    "130": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/130/attachments/433",
+      "name": "Photo 1.jpg",
+      "size": 2277137,
+      "count": 3
+    },
+    "131": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/131/attachments/35",
+      "name": "Photo1.jpg",
+      "size": 2373711,
+      "count": 2
+    },
+    "132": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/132/attachments/123",
+      "name": "Photo1.jpg",
+      "size": 1641286,
+      "count": 4
+    },
+    "134": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/134/attachments/541",
+      "name": "Photo 1.jpg",
+      "size": 3517466,
+      "count": 3
+    },
+    "136": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/136/attachments/614",
+      "name": "Photo 1.jpg",
+      "size": 2757741,
+      "count": 3
+    },
+    "137": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/137/attachments/570",
+      "name": "Photo 1.jpg",
+      "size": 3665507,
+      "count": 2
+    },
+    "139": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/139/attachments/9",
+      "name": "Photo1.jpg",
+      "size": 2406049,
+      "count": 3
+    },
+    "140": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/140/attachments/83",
+      "name": "Photo1.jpg",
+      "size": 2599902,
+      "count": 1
+    },
+    "141": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/141/attachments/842",
+      "name": "Photo 1.jpg",
+      "size": 4129574,
+      "count": 3
+    },
+    "142": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/142/attachments/244",
+      "name": "Photo1.jpg",
+      "size": 288195,
+      "count": 2
+    },
+    "143": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/143/attachments/545",
+      "name": "Photo 1.jpg",
+      "size": 3353495,
+      "count": 3
+    },
+    "145": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/145/attachments/351",
+      "name": "Photo 1.jpg",
+      "size": 4175066,
+      "count": 3
+    },
+    "146": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/146/attachments/261",
+      "name": "Photo1.jpg",
+      "size": 395715,
+      "count": 2
+    },
+    "147": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/147/attachments/204",
+      "name": "Photo 1.jpg",
+      "size": 750068,
+      "count": 4
+    },
+    "148": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/148/attachments/527",
+      "name": "Photo 1.jpg",
+      "size": 4251716,
+      "count": 1
+    },
+    "149": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/149/attachments/772",
+      "name": "Photo 1.jpg",
+      "size": 3467054,
+      "count": 3
+    },
+    "152": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/152/attachments/320",
+      "name": "Photo 1.jpg",
+      "size": 5722897,
+      "count": 1
+    },
+    "154": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/154/attachments/654",
+      "name": "Photo 1.jpg",
+      "size": 4116203,
+      "count": 3
+    },
+    "155": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/155/attachments/24",
+      "name": "Photo1.jpg",
+      "size": 3488973,
+      "count": 3
+    },
+    "156": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/156/attachments/182",
+      "name": "Photo 1.jpg",
+      "size": 427716,
+      "count": 3
+    },
+    "157": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/157/attachments/323",
+      "name": "Photo 1.jpg",
+      "size": 3411931,
+      "count": 3
+    },
+    "158": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/158/attachments/604",
+      "name": "Photo 1.jpg",
+      "size": 3696044,
+      "count": 3
+    },
+    "160": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/160/attachments/202",
+      "name": "Photo 1.jpg",
+      "size": 3878635,
+      "count": 3
+    },
+    "161": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/161/attachments/482",
+      "name": "Photo 1.jpg",
+      "size": 3259944,
+      "count": 3
+    },
+    "162": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/162/attachments/591",
+      "name": "Photo 1.jpg",
+      "size": 3616669,
+      "count": 3
+    },
+    "163": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/163/attachments/90",
+      "name": "Photo1.jpg",
+      "size": 616986,
+      "count": 2
+    },
+    "164": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/164/attachments/102",
+      "name": "Photo1.jpg",
+      "size": 2243748,
+      "count": 3
+    },
+    "165": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/165/attachments/528",
+      "name": "Photo 1.jpg",
+      "size": 4004245,
+      "count": 3
+    },
+    "166": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/166/attachments/330",
+      "name": "Photo 1.jpg",
+      "size": 4576176,
+      "count": 1
+    },
+    "167": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/167/attachments/232",
+      "name": "Photo1.jpg",
+      "size": 719029,
+      "count": 2
+    },
+    "168": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/168/attachments/669",
+      "name": "Photo 1.jpg",
+      "size": 3691065,
+      "count": 3
+    },
+    "169": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/169/attachments/41",
+      "name": "Photo1.jpg",
+      "size": 2161128,
+      "count": 2
+    },
+    "170": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/170/attachments/782",
+      "name": "Photo 1.jpg",
+      "size": 3961412,
+      "count": 3
+    },
+    "171": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/171/attachments/620",
+      "name": "Photo 1.jpg",
+      "size": 3675144,
+      "count": 3
+    },
+    "173": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/173/attachments/263",
+      "name": "Photo1.jpg",
+      "size": 495091,
+      "count": 3
+    },
+    "175": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/175/attachments/779",
+      "name": "Photo 1.jpg",
+      "size": 3934647,
+      "count": 3
+    },
+    "177": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/177/attachments/149",
+      "name": "Photo1.jpg",
+      "size": 2702155,
+      "count": 2
+    },
+    "178": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/178/attachments/776",
+      "name": "Photo 1.jpg",
+      "size": 3663782,
+      "count": 3
+    },
+    "180": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/180/attachments/740",
+      "name": "Photo 1.jpg",
+      "size": 3111098,
+      "count": 3
+    },
+    "181": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/181/attachments/644",
+      "name": "Photo 1.jpg",
+      "size": 3607234,
+      "count": 3
+    },
+    "182": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/182/attachments/831",
+      "name": "Photo 1.jpg",
+      "size": 3429877,
+      "count": 3
+    },
+    "183": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/183/attachments/79",
+      "name": "Photo4.jpg",
+      "size": 1933295,
+      "count": 2
+    },
+    "184": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/184/attachments/687",
+      "name": "Photo 1.jpg",
+      "size": 3692958,
+      "count": 3
+    },
+    "185": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/185/attachments/561",
+      "name": "Photo_4.jpg",
+      "size": 2307194,
+      "count": 3
+    },
+    "186": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/186/attachments/594",
+      "name": "Photo 1.jpg",
+      "size": 4743725,
+      "count": 3
+    },
+    "187": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/187/attachments/376",
+      "name": "Photo 1.jpg",
+      "size": 4516369,
+      "count": 3
+    },
+    "188": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/188/attachments/522",
+      "name": "Photo 1.jpg",
+      "size": 2578299,
+      "count": 3
+    },
+    "190": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/190/attachments/452",
+      "name": "Photo 1.jpg",
+      "size": 3626744,
+      "count": 3
+    },
+    "191": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/191/attachments/559",
+      "name": "Photo 1.jpg",
+      "size": 4095705,
+      "count": 2
+    },
+    "193": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/193/attachments/731",
+      "name": "Photo 1.jpg",
+      "size": 3848707,
+      "count": 3
+    },
+    "194": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/194/attachments/39",
+      "name": "Photo1.jpg",
+      "size": 2859710,
+      "count": 2
+    },
+    "195": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/195/attachments/752",
+      "name": "Photo 1.jpg",
+      "size": 3518883,
+      "count": 3
+    },
+    "196": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/196/attachments/857",
+      "name": "Photo 1.jpg",
+      "size": 3315251,
+      "count": 3
+    },
+    "197": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/197/attachments/331",
+      "name": "Photo 1.jpg",
+      "size": 4302672,
+      "count": 2
+    },
+    "198": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/198/attachments/565",
+      "name": "Photo 1.jpg",
+      "size": 3648075,
+      "count": 3
+    },
+    "199": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/199/attachments/250",
+      "name": "Photo1.jpg",
+      "size": 412412,
+      "count": 2
+    },
+    "200": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/200/attachments/526",
+      "name": "Photo 1.jpg",
+      "size": 3912331,
+      "count": 1
+    },
+    "201": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/201/attachments/345",
+      "name": "Photo 1.jpg",
+      "size": 3990707,
+      "count": 3
+    },
+    "202": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/202/attachments/317",
+      "name": "Photo 1.jpg",
+      "size": 3430784,
+      "count": 3
+    },
+    "203": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/203/attachments/64",
+      "name": "Photo1.jpg",
+      "size": 2290340,
+      "count": 1
+    },
+    "204": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/204/attachments/792",
+      "name": "Photo 1.jpg",
+      "size": 3343435,
+      "count": 3
+    },
+    "205": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/205/attachments/257",
+      "name": "Photo1.jpg",
+      "size": 451443,
+      "count": 2
+    },
+    "206": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/206/attachments/568",
+      "name": "Photo 1.jpg",
+      "size": 4308581,
+      "count": 2
+    },
+    "207": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/207/attachments/788",
+      "name": "Photo 1.jpg",
+      "size": 3909786,
+      "count": 3
+    },
+    "208": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/208/attachments/811",
+      "name": "Photo 1.jpg",
+      "size": 4146888,
+      "count": 2
+    },
+    "209": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/209/attachments/574",
+      "name": "Photo 1.jpg",
+      "size": 3998683,
+      "count": 2
+    },
+    "210": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/210/attachments/855",
+      "name": "Photo 1.jpg",
+      "size": 5303552,
+      "count": 3
+    },
+    "211": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/211/attachments/138",
+      "name": "Photo1.jpg",
+      "size": 2798371,
+      "count": 2
+    },
+    "212": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/212/attachments/761",
+      "name": "Photo 1.jpg",
+      "size": 3817326,
+      "count": 3
+    },
+    "213": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/213/attachments/739",
+      "name": "Photo 1.jpg",
+      "size": 6141534,
+      "count": 3
+    },
+    "214": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/214/attachments/663",
+      "name": "Photo 1.jpg",
+      "size": 3688420,
+      "count": 3
+    },
+    "215": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/215/attachments/546",
+      "name": "Photo 1.jpg",
+      "size": 5759861,
+      "count": 1
+    },
+    "217": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/217/attachments/832",
+      "name": "Photo 1.jpg",
+      "size": 4531875,
+      "count": 3
+    },
+    "218": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/218/attachments/607",
+      "name": "Photo 1.jpg",
+      "size": 2885640,
+      "count": 3
+    },
+    "219": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/219/attachments/597",
+      "name": "Photo 1.jpg",
+      "size": 3925048,
+      "count": 3
+    },
+    "220": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/220/attachments/800",
+      "name": "Photo 1.jpg",
+      "size": 3476030,
+      "count": 2
+    },
+    "222": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/222/attachments/120",
+      "name": "Photo1.jpg",
+      "size": 2001342,
+      "count": 3
+    },
+    "223": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/223/attachments/131",
+      "name": "Photo1.jpg",
+      "size": 2242080,
+      "count": 3
+    },
+    "227": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/227/attachments/78",
+      "name": "Photo 1.jpg",
+      "size": 3418912,
+      "count": 3
+    },
+    "229": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/229/attachments/822",
+      "name": "Photo 1.jpg",
+      "size": 3277308,
+      "count": 3
+    },
+    "230": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/230/attachments/624",
+      "name": "Photo 1.jpg",
+      "size": 3269034,
+      "count": 3
+    },
+    "231": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/231/attachments/534",
+      "name": "Photo 1.jpg",
+      "size": 4209819,
+      "count": 3
+    },
+    "232": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/232/attachments/679",
+      "name": "Photo 1.jpg",
+      "size": 3530375,
+      "count": 3
+    },
+    "233": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/233/attachments/729",
+      "name": "Photo 1.jpg",
+      "size": 4599879,
+      "count": 3
+    },
+    "235": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/235/attachments/178",
+      "name": "Photo 1.jpg",
+      "size": 3991830,
+      "count": 2
+    },
+    "236": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/236/attachments/509",
+      "name": "Photo 1.jpg",
+      "size": 4321124,
+      "count": 2
+    },
+    "237": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/237/attachments/497",
+      "name": "Photo 1.jpg",
+      "size": 2950114,
+      "count": 3
+    },
+    "239": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/239/attachments/860",
+      "name": "Photo 1.jpg",
+      "size": 2823600,
+      "count": 3
+    },
+    "240": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/240/attachments/400",
+      "name": "Photo 1.jpg",
+      "size": 4039404,
+      "count": 3
+    },
+    "242": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/242/attachments/304",
+      "name": "Photo 1.jpg",
+      "size": 5086448,
+      "count": 3
+    },
+    "244": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/244/attachments/216",
+      "name": "Photo1.jpg",
+      "size": 2926845,
+      "count": 1
+    },
+    "245": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/245/attachments/844",
+      "name": "Photo 1.jpg",
+      "size": 3518914,
+      "count": 3
+    },
+    "246": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/246/attachments/193",
+      "name": "HHM_BLACKFEET_NATION1.jpg",
+      "size": 195517,
+      "count": 3
+    },
+    "247": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/247/attachments/297",
+      "name": "Photo1.jpg",
+      "size": 2198438,
+      "count": 3
+    },
+    "248": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/248/attachments/560",
+      "name": "Photo 1.jpg",
+      "size": 5462895,
+      "count": 1
+    },
+    "249": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/249/attachments/726",
+      "name": "Photo 1.jpg",
+      "size": 3511504,
+      "count": 3
+    },
+    "250": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/250/attachments/481",
+      "name": "Photo 1.jpg",
+      "size": 4950255,
+      "count": 3
+    },
+    "251": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/251/attachments/373",
+      "name": "Photo 1.jpg",
+      "size": 4674640,
+      "count": 3
+    },
+    "252": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/252/attachments/690",
+      "name": "Photo 1.jpg",
+      "size": 4589082,
+      "count": 3
+    },
+    "253": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/253/attachments/333",
+      "name": "Photo 1.jpg",
+      "size": 3592044,
+      "count": 1
+    },
+    "255": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/255/attachments/395",
+      "name": "Photo 1.jpg",
+      "size": 4272225,
+      "count": 3
+    },
+    "256": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/256/attachments/314",
+      "name": "Photo 1.jpg",
+      "size": 2571585,
+      "count": 3
+    },
+    "257": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/257/attachments/746",
+      "name": "Photo 1.jpg",
+      "size": 3666488,
+      "count": 3
+    },
+    "258": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/258/attachments/279",
+      "name": "Photo1.jpg",
+      "size": 2331101,
+      "count": 3
+    },
+    "259": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/259/attachments/248",
+      "name": "Photo1.jpg",
+      "size": 2758745,
+      "count": 2
+    },
+    "260": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/260/attachments/100",
+      "name": "Photo1.jpg",
+      "size": 449011,
+      "count": 2
+    },
+    "261": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/261/attachments/445",
+      "name": "Photo 1.jpg",
+      "size": 2890632,
+      "count": 3
+    },
+    "262": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/262/attachments/268",
+      "name": "Photo 1.jpg",
+      "size": 2875321,
+      "count": 3
+    },
+    "264": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/264/attachments/321",
+      "name": "Photo 1.jpg",
+      "size": 5425003,
+      "count": 1
+    },
+    "265": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/265/attachments/755",
+      "name": "Photo 1.jpg",
+      "size": 3884440,
+      "count": 3
+    },
+    "267": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/267/attachments/408",
+      "name": "Photo 1.jpg",
+      "size": 4431894,
+      "count": 3
+    },
+    "268": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/268/attachments/685",
+      "name": "Photo 1.jpg",
+      "size": 4052698,
+      "count": 2
+    },
+    "269": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/269/attachments/380",
+      "name": "Photo 1.jpg",
+      "size": 6512497,
+      "count": 3
+    },
+    "270": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/270/attachments/295",
+      "name": "Photo1.jpg",
+      "size": 2654300,
+      "count": 2
+    },
+    "271": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/271/attachments/238",
+      "name": "Photo1.jpg",
+      "size": 547164,
+      "count": 2
+    },
+    "272": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/272/attachments/220",
+      "name": "Photo1.jpg",
+      "size": 2272011,
+      "count": 2
+    },
+    "273": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/273/attachments/531",
+      "name": "Photo 1.jpg",
+      "size": 4465114,
+      "count": 2
+    },
+    "274": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/274/attachments/99",
+      "name": "Photo1.jpg",
+      "size": 535735,
+      "count": 1
+    },
+    "275": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/275/attachments/164",
+      "name": "Photo1.jpg",
+      "size": 2143623,
+      "count": 4
+    },
+    "276": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/276/attachments/127",
+      "name": "Photo1.jpg",
+      "size": 1883961,
+      "count": 4
+    },
+    "277": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/277/attachments/774",
+      "name": "Photo 1.jpg",
+      "size": 3771333,
+      "count": 3
+    },
+    "278": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/278/attachments/219",
+      "name": "Photo1.jpg",
+      "size": 2356698,
+      "count": 1
+    },
+    "279": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/279/attachments/879",
+      "name": "Photo+1.jpg",
+      "size": 573043,
+      "count": 3
+    },
+    "281": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/281/attachments/85",
+      "name": "Photo1.jpg",
+      "size": 2959189,
+      "count": 2
+    },
+    "282": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/282/attachments/154",
+      "name": "Photo1.jpg",
+      "size": 1286070,
+      "count": 2
+    },
+    "283": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/283/attachments/871",
+      "name": "Photo+1.jpg",
+      "size": 482429,
+      "count": 3
+    },
+    "284": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/284/attachments/360",
+      "name": "Photo 1.jpg",
+      "size": 3992591,
+      "count": 3
+    },
+    "285": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/285/attachments/147",
+      "name": "Photo1.jpg",
+      "size": 2711872,
+      "count": 2
+    },
+    "287": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/287/attachments/721",
+      "name": "Photo+3.jpg",
+      "size": 644853,
+      "count": 3
+    },
+    "288": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/288/attachments/638",
+      "name": "Photo 1.jpg",
+      "size": 4841224,
+      "count": 5
+    },
+    "289": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/289/attachments/252",
+      "name": "Photo1.jpg",
+      "size": 454374,
+      "count": 2
+    },
+    "290": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/290/attachments/322",
+      "name": "Photo 1.jpg",
+      "size": 6091851,
+      "count": 1
+    },
+    "291": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/291/attachments/758",
+      "name": "Photo 1.jpg",
+      "size": 4325295,
+      "count": 3
+    },
+    "292": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/292/attachments/12",
+      "name": "Photo1.jpg",
+      "size": 2413080,
+      "count": 2
+    },
+    "293": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/293/attachments/493",
+      "name": "Photo 1.jpg",
+      "size": 3415319,
+      "count": 3
+    },
+    "294": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/294/attachments/310",
+      "name": "Photo 1.jpg",
+      "size": 4973950,
+      "count": 3
+    },
+    "295": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/295/attachments/476",
+      "name": "Photo 1.jpg",
+      "size": 581830,
+      "count": 3
+    },
+    "296": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/296/attachments/439",
+      "name": "Photo 1.jpg",
+      "size": 2843417,
+      "count": 3
+    },
+    "297": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/297/attachments/675",
+      "name": "Photo 1.jpg",
+      "size": 3919147,
+      "count": 3
+    },
+    "299": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/299/attachments/326",
+      "name": "Photo 1.jpg",
+      "size": 2423548,
+      "count": 3
+    },
+    "300": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/300/attachments/582",
+      "name": "Photo 1.jpg",
+      "size": 3841931,
+      "count": 3
+    },
+    "301": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/301/attachments/799",
+      "name": "Photo 1.jpg",
+      "size": 3985759,
+      "count": 3
+    },
+    "302": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/302/attachments/206",
+      "name": "Photo 1.jpg",
+      "size": 3858749,
+      "count": 3
+    },
+    "303": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/303/attachments/806",
+      "name": "Photo 1.jpg",
+      "size": 3054268,
+      "count": 3
+    },
+    "304": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/304/attachments/808",
+      "name": "Photo 1.jpg",
+      "size": 3340308,
+      "count": 3
+    },
+    "305": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/305/attachments/43",
+      "name": "Photo1.jpg",
+      "size": 2800404,
+      "count": 2
+    },
+    "306": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/306/attachments/794",
+      "name": "Photo 1.jpg",
+      "size": 3247450,
+      "count": 3
+    },
+    "308": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/308/attachments/503",
+      "name": "Photo 1.jpg",
+      "size": 4951393,
+      "count": 2
+    },
+    "309": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/309/attachments/37",
+      "name": "Photo1.jpg",
+      "size": 2318689,
+      "count": 2
+    },
+    "310": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/310/attachments/496",
+      "name": "Photo 1.jpg",
+      "size": 4380588,
+      "count": 3
+    },
+    "311": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/311/attachments/848",
+      "name": "Photo 1.jpg",
+      "size": 4155375,
+      "count": 3
+    },
+    "312": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/312/attachments/471",
+      "name": "Photo 1.jpg",
+      "size": 465959,
+      "count": 3
+    },
+    "313": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/313/attachments/451",
+      "name": "Photo 1.jpg",
+      "size": 4275818,
+      "count": 1
+    },
+    "314": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/314/attachments/329",
+      "name": "Photo 1.jpg",
+      "size": 5037178,
+      "count": 1
+    },
+    "315": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/315/attachments/718",
+      "name": "Photo 1.jpg",
+      "size": 4349576,
+      "count": 3
+    },
+    "317": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/317/attachments/300",
+      "name": "Photo 1.jpg",
+      "size": 4682967,
+      "count": 2
+    },
+    "318": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/318/attachments/815",
+      "name": "Photo 1.jpg",
+      "size": 4590276,
+      "count": 3
+    },
+    "319": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/319/attachments/863",
+      "name": "Photo 1.jpg",
+      "size": 2990519,
+      "count": 3
+    },
+    "320": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/320/attachments/342",
+      "name": "Photo 1.jpg",
+      "size": 4604537,
+      "count": 3
+    },
+    "323": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/323/attachments/362",
+      "name": "Photo 1.jpg",
+      "size": 3858433,
+      "count": 3
+    },
+    "324": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/324/attachments/81",
+      "name": "Photo1.jpg",
+      "size": 2668677,
+      "count": 2
+    },
+    "325": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/325/attachments/485",
+      "name": "Photo 1.jpg",
+      "size": 3031953,
+      "count": 3
+    },
+    "326": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/326/attachments/715",
+      "name": "Photo 1.jpg",
+      "size": 3445383,
+      "count": 3
+    },
+    "327": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/327/attachments/94",
+      "name": "Photo1.jpg",
+      "size": 533345,
+      "count": 1
+    },
+    "328": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/328/attachments/151",
+      "name": "Photo1.jpg",
+      "size": 3339619,
+      "count": 2
+    },
+    "329": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/329/attachments/686",
+      "name": "Photo 1.jpg",
+      "size": 3984351,
+      "count": 1
+    },
+    "331": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/331/attachments/168",
+      "name": "Photo1.jpg",
+      "size": 1940118,
+      "count": 3
+    },
+    "334": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/334/attachments/839",
+      "name": "Photo 1.jpg",
+      "size": 3386554,
+      "count": 3
+    },
+    "336": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/336/attachments/836",
+      "name": "Photo 1.jpg",
+      "size": 3390663,
+      "count": 3
+    },
+    "337": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/337/attachments/603",
+      "name": "Photo 1.jpg",
+      "size": 4519439,
+      "count": 3
+    },
+    "339": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/339/attachments/246",
+      "name": "Photo1.jpg",
+      "size": 300268,
+      "count": 2
+    },
+    "342": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/342/attachments/180",
+      "name": "Photo 1.jpg",
+      "size": 4046903,
+      "count": 3
+    },
+    "343": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/343/attachments/703",
+      "name": "Photo 1.jpg",
+      "size": 3578801,
+      "count": 3
+    },
+    "345": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/345/attachments/189",
+      "name": "Photo 1.jpg",
+      "size": 3846205,
+      "count": 3
+    },
+    "347": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/347/attachments/880",
+      "name": "Photo+1 (1).jpg",
+      "size": 509260,
+      "count": 3
+    },
+    "348": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/348/attachments/556",
+      "name": "Photo 1.jpg",
+      "size": 3257521,
+      "count": 3
+    },
+    "349": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/349/attachments/467",
+      "name": "Photo 1.jpg",
+      "size": 3469805,
+      "count": 3
+    },
+    "350": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/350/attachments/254",
+      "name": "Photo1.jpg",
+      "size": 375026,
+      "count": 2
+    },
+    "351": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/351/attachments/97",
+      "name": "Photo1.jpg",
+      "size": 587807,
+      "count": 2
+    },
+    "352": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/352/attachments/424",
+      "name": "Photo 1.jpg",
+      "size": 3318128,
+      "count": 3
+    },
+    "353": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/353/attachments/117",
+      "name": "Photo1.jpg",
+      "size": 2202027,
+      "count": 3
+    },
+    "354": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/354/attachments/284",
+      "name": "Photo1.jpg",
+      "size": 2377682,
+      "count": 3
+    },
+    "355": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/355/attachments/765",
+      "name": "Photo 1.jpg",
+      "size": 3895318,
+      "count": 3
+    },
+    "357": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/357/attachments/224",
+      "name": "Photo1.jpg",
+      "size": 3122587,
+      "count": 2
+    },
+    "358": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/358/attachments/346",
+      "name": "Photo 1.jpg",
+      "size": 3965692,
+      "count": 3
+    },
+    "359": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/359/attachments/162",
+      "name": "Photo1.jpg",
+      "size": 2655088,
+      "count": 3
+    },
+    "360": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/360/attachments/682",
+      "name": "Photo 1.jpg",
+      "size": 3690847,
+      "count": 1
+    },
+    "362": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/362/attachments/145",
+      "name": "Photo1.jpg",
+      "size": 2809712,
+      "count": 2
+    },
+    "363": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/363/attachments/631",
+      "name": "Photo 1.jpg",
+      "size": 3152525,
+      "count": 3
+    },
+    "365": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/365/attachments/652",
+      "name": "Photo 1.jpg",
+      "size": 4601450,
+      "count": 3
+    },
+    "366": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/366/attachments/136",
+      "name": "Photo1.jpg",
+      "size": 2699368,
+      "count": 3
+    },
+    "367": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/367/attachments/488",
+      "name": "Photo 1.jpg",
+      "size": 3746255,
+      "count": 3
+    },
+    "368": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/368/attachments/458",
+      "name": "Photo 1.jpg",
+      "size": 3639294,
+      "count": 3
+    },
+    "369": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/369/attachments/626",
+      "name": "Photo 1.jpg",
+      "size": 3313605,
+      "count": 3
+    },
+    "372": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/372/attachments/92",
+      "name": "Photo1.jpg",
+      "size": 514456,
+      "count": 2
+    },
+    "374": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/374/attachments/112",
+      "name": "Photo1.jpg",
+      "size": 2465736,
+      "count": 3
+    },
+    "375": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/375/attachments/236",
+      "name": "Photo1.jpg",
+      "size": 557716,
+      "count": 2
+    },
+    "376": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/376/attachments/417",
+      "name": "Photo 1.jpg",
+      "size": 3893389,
+      "count": 3
+    },
+    "377": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/377/attachments/57",
+      "name": "Photo1.jpg",
+      "size": 2483540,
+      "count": 3
+    },
+    "379": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/379/attachments/436",
+      "name": "Photo 1.jpg",
+      "size": 1902503,
+      "count": 3
+    },
+    "380": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/380/attachments/242",
+      "name": "Photo1.jpg",
+      "size": 396975,
+      "count": 2
+    },
+    "381": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/381/attachments/226",
+      "name": "Photo1.jpg",
+      "size": 734479,
+      "count": 2
+    },
+    "382": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/382/attachments/850",
+      "name": "Photo 1.jpg",
+      "size": 3862260,
+      "count": 3
+    },
+    "383": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/383/attachments/65",
+      "name": "Photo1.jpg",
+      "size": 2139486,
+      "count": 2
+    },
+    "384": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/384/attachments/513",
+      "name": "Photo 1.jpg",
+      "size": 3411095,
+      "count": 3
+    },
+    "385": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/385/attachments/405",
+      "name": "Photo 1.jpg",
+      "size": 553950,
+      "count": 3
+    },
+    "387": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/387/attachments/192",
+      "name": "Photo 1.jpg",
+      "size": 3743800,
+      "count": 3
+    },
+    "388": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/388/attachments/259",
+      "name": "Photo1.jpg",
+      "size": 423717,
+      "count": 2
+    },
+    "389": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/389/attachments/673",
+      "name": "Photo 1.jpg",
+      "size": 3208120,
+      "count": 3
+    },
+    "390": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/390/attachments/885",
+      "name": "Photo 1.jpg",
+      "size": 3858952,
+      "count": 4
+    },
+    "391": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/391/attachments/2003",
+      "name": "Photo 1.jpg",
+      "size": 496835,
+      "count": 3
+    },
+    "392": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/392/attachments/2004",
+      "name": "Photo 1.jpg",
+      "size": 3612296,
+      "count": 3
+    },
+    "393": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/393/attachments/2006",
+      "name": "Photo 1.jpg",
+      "size": 428545,
+      "count": 3
+    },
+    "394": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/394/attachments/893",
+      "name": "Photo 1.jpg",
+      "size": 545047,
+      "count": 4
+    },
+    "395": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/395/attachments/2010",
+      "name": "Photo 1.jpg",
+      "size": 486561,
+      "count": 3
+    },
+    "396": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/396/attachments/2011",
+      "name": "Photo 1.jpg",
+      "size": 444052,
+      "count": 3
+    },
+    "397": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/397/attachments/897",
+      "name": "Photo 1.jpg",
+      "size": 462597,
+      "count": 3
+    },
+    "398": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/398/attachments/898",
+      "name": "Photo 1.jpg",
+      "size": 520743,
+      "count": 3
+    },
+    "399": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/399/attachments/901",
+      "name": "Photo 1.jpg",
+      "size": 533935,
+      "count": 3
+    },
+    "400": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/400/attachments/2016",
+      "name": "Photo 1.jpg",
+      "size": 514014,
+      "count": 3
+    },
+    "801": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/801/attachments/903",
+      "name": "Photo 1.jpg",
+      "size": 480350,
+      "count": 3
+    },
+    "802": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/802/attachments/2019",
+      "name": "Photo 1.jpg",
+      "size": 397092,
+      "count": 3
+    },
+    "803": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/803/attachments/907",
+      "name": "Photo 1.jpg",
+      "size": 446965,
+      "count": 3
+    },
+    "804": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/804/attachments/909",
+      "name": "Photo 1.jpg",
+      "size": 3663115,
+      "count": 3
+    },
+    "805": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/805/attachments/2023",
+      "name": "Photo 1.jpg",
+      "size": 721497,
+      "count": 3
+    },
+    "806": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/806/attachments/2025",
+      "name": "Photo 1.jpg",
+      "size": 504959,
+      "count": 3
+    },
+    "807": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/807/attachments/913",
+      "name": "Photo 1.jpg",
+      "size": 382274,
+      "count": 3
+    },
+    "808": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/808/attachments/914",
+      "name": "Photo 1.jpg",
+      "size": 514009,
+      "count": 1
+    },
+    "809": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/809/attachments/2029",
+      "name": "Photo 1.jpg",
+      "size": 841006,
+      "count": 3
+    },
+    "813": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/813/attachments/2036",
+      "name": "Photo 1.jpg",
+      "size": 662201,
+      "count": 3
+    },
+    "814": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/814/attachments/2037",
+      "name": "Photo 1.jpg",
+      "size": 504249,
+      "count": 3
+    },
+    "815": {
+      "url": "https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0/815/attachments/2039",
+      "name": "Photo 1.jpg",
+      "size": 565299,
+      "count": 3
+    }
+  }
+}
