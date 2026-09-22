@@ -2,25 +2,26 @@
 """
 Generate a QuickStatements v1 batch that creates one Wikidata item per standing marker.
 
-Wikidata had zero marker items in Montana or Idaho as of Sep 2026 (checked via SPARQL against
+Wikidata currently has zero marker items in Montana or Idaho (checked via SPARQL against
 commemorative plaque Q721747 and interpretive sign Q104530379 within the two-state bbox), so this
 is a blank-slate seed. Modeling follows the Indiana / North Carolina / Michigan state-marker
 projects, which each got a dedicated external-ID property (P9546, P9492, P12604): the batch uses
-the state sign number as an alias now and README notes how to propose the ID properties.
+the state sign number as an alias now and README notes how to propose the two ID properties.
 
 Each item gets:
   Len / Den            label + description
-  P31  Q104530379      instance of: interpretive sign
+  P31  Q104530379      instance of: interpretive sign   (Idaho + Montana signs are large boards, not plaques)
   P625                 coordinate location
   P17   Q30            country: United States
-  P131                 located in: county (data/wikidata_counties.json), else the state
-  P137                 operator: the state agency (STATE table below)
+  P131                 located in: county
+  P137                 operator: MDT / ITD
+  P361 / P8845?        (not used — no program item exists yet; see README)
   S854 / S813          reference: source service URL + retrieval date
   Aen                  alias: "<STATE>-<agency number>"
 
 Run:  python pipeline/wikidata_seed.py   →  dist/wikidata_quickstatements.txt
 Then paste into https://quickstatements.toolforge.org/ (batch mode, v1) under your own account.
-Review the first 10 lines by hand; run in batches of ~100. States not in STATE are skipped.
+Review the first 10 lines by hand; run in batches of ~100.
 """
 from __future__ import annotations
 import json, time
@@ -39,15 +40,17 @@ def q(s: str) -> str:
 
 def main():
     lines, skipped = [], []
-    feats = [f for f in FC["features"] if f["properties"].get("status") != "removed" and f["properties"]["state"] in STATE]
+    feats = [f for f in FC["features"] if f["properties"].get("status") != "removed"]
     # Wikidata refuses two items with identical label + description; disambiguate repeats with the agency number
     from collections import Counter
     key = lambda p: (p["title"].rstrip(".").lower(), p["state"], p.get("county"))
     dupes = {k for k, n in Counter(key(f["properties"]) for f in feats).items() if n > 1}
     for f in feats:
         p = f["properties"]
+        if p.get("status") == "removed":
+            continue
         st, st_q, agency_q, kind = STATE[p["state"]]
-        county_q = COUNTIES.get(p["state"], {}).get(p.get("county") or "")
+        county_q = COUNTIES[p["state"]].get(p.get("county") or "")
         lon, lat = f["geometry"]["coordinates"]
         title = p["title"].rstrip(".")
         if not title:
@@ -63,8 +66,11 @@ def main():
                   f"LAST\tP31\t{INSTANCE}{ref}",
                   f"LAST\tP625\t@{lat:.6f}/{lon:.6f}{ref}",
                   f"LAST\tP17\tQ30",
-                  f"LAST\tP137\t{agency_q}{ref}",
-                  f"LAST\tP131\t{county_q or st_q}{ref}"]
+                  f"LAST\tP137\t{agency_q}{ref}"]
+        if county_q:
+            lines.append(f"LAST\tP131\t{county_q}{ref}")
+        else:
+            lines.append(f"LAST\tP131\t{st_q}{ref}")
     out = ROOT / "dist" / "wikidata_quickstatements.txt"
     out.parent.mkdir(exist_ok=True)
     out.write_text("\n".join(lines) + "\n", encoding="utf-8")

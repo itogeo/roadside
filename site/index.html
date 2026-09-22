@@ -158,9 +158,7 @@
     <a href="https://idaho-highway-historical-markers-iplan.hub.arcgis.com/" target="_blank" rel="noopener">Idaho ITD / State Historical Society</a>.
     Compilation CC&nbsp;BY&nbsp;4.0, code MIT.
     <a href="dist/roadside-markers.gpx" download>GPX</a> · <a href="dist/roadside-markers.kml" download>KML</a> ·
-    <a href="data/markers.geojson" download>GeoJSON</a> · <a href="https://github.com/itogeo/roadside" target="_blank" rel="noopener">Source</a> ·
-    <a href="https://www.buymeacoffee.com/itogeo" target="_blank" rel="noopener">Buy me a coffee</a>
-    <br>An open-source project by <a href="https://itogeo.com" target="_blank" rel="noopener">Ito Geospatial</a>.
+    <a href="data/markers.geojson" download>GeoJSON</a> · <a href="https://github.com/itogeo/roadside" target="_blank" rel="noopener">Source</a>
     <br><a id="add-marker" href="#" target="_blank" rel="noopener">Add a missing marker</a> · <a id="add-state" href="#" target="_blank" rel="noopener">Add your state</a>
   </footer>
 
@@ -175,7 +173,7 @@
 
 <script>
 (async function(){
-  const REPO = 'itogeo/roadside';   // drives every contribute link
+  const REPO = 'itogeo/roadside';   // ← change once, drives every contribute link
   const issueUrl = (tpl, p, lat, lon) => `https://github.com/${REPO}/issues/new?template=${tpl}.yml&title=${encodeURIComponent((tpl==='fix-marker'?'Fix: ':'Add: ')+(p?.title||''))}&marker_id=${encodeURIComponent(p?.id||'')}&coords=${lat!==undefined?lat.toFixed(5)+', '+lon.toFixed(5):''}`;
   document.getElementById('add-marker').href = `https://github.com/${REPO}/issues/new?template=add-marker.yml`;
   document.getElementById('add-state').href = `https://github.com/${REPO}/issues/new?template=add-state.yml`;
@@ -187,14 +185,14 @@
   let data, visible = [], byId = new Map(), map, speaking = null;
 
   // ----- map -----
-  // Self-contained basemap: US Census boundaries + highways tiled into site/tiles/basemap.pmtiles (12 MB, public domain).
+  // Self-contained basemap: US Census boundaries + highways tiled into site/tiles/basemap.pmtiles (13 MB, public domain).
   // MapLibre reads it by HTTP range requests straight from wherever this folder is hosted — no tile server, no key.
   maplibregl.addProtocol('pmtiles', new pmtiles.Protocol().tile);
   const base = new URL('.', location.href).href;
   const style = {
     version: 8,
     glyphs: base + 'fonts/{fontstack}/{range}.pbf',
-    sources: { census: { type:'vector', url:'pmtiles://' + base + 'tiles/basemap.pmtiles', attribution:'Boundaries & roads: US Census Bureau' } },
+    sources: { census: { type:'vector', url:'pmtiles://' + base + 'tiles/basemap.pmtiles', attribution:'Boundaries &amp; roads: US Census Bureau · Populated places: Natural Earth' } },
     layers: [
       { id:'bg', type:'background', paint:{ 'background-color':'#E9E4D6' } },
       { id:'state-fill', type:'fill', source:'census', 'source-layer':'state', paint:{ 'fill-color':'#F5F1E6' } },
@@ -268,8 +266,11 @@
   function applyFilters(){
     const q = $('#q').value.trim().toLowerCase();
     visible = data.features.filter(f => matches(f.properties, q));
+    // map layer filter
+    const ids = visible.map(f => f.properties.id);
     const fc = {type:'FeatureCollection', features:visible.map(f => ({...f, properties:{...f.properties, has_text:!!f.properties.text}}))};
     if(map.getSource('markers')) map.getSource('markers').setData(fc);
+    // list (sorted MT/ID then title)
     const sorted = [...visible].sort((a,b)=> a.properties.title.localeCompare(b.properties.title));
     list.innerHTML = sorted.map(f => {
       const p = f.properties;

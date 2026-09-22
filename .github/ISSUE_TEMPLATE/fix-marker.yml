@@ -12,7 +12,9 @@ body:
     attributes: { label: Coordinates on record, description: Prefilled — change only if the pin is in the wrong place }
   - type: dropdown
     id: kind
-    attributes: { label: What's wrong, options: [Location is off, Text has an error, Sign has been removed, Title is wrong, Something else] }
+    attributes:
+      label: "What's wrong"
+      options: ["Location is off", "Text has an error", "Sign has been removed", "Title is wrong", "Something else"]
     validations: { required: true }
   - type: textarea
     id: correction

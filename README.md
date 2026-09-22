@@ -5,8 +5,6 @@ with the sign text, where the state publishes it — so you can read the sign wi
 
 **Live site:** https://itogeo.github.io/roadside/
 
-An open-source project by [Ito Geospatial](https://itogeo.com). No accounts, no keys, no servers — fork it and it runs.
-
 ## What's in the box
 
 ```
@@ -14,17 +12,18 @@ pipeline/build.py           Pulls the official state sources, normalizes, writes
 pipeline/enrich_county.py   Point-in-polygon county + FIPS from Census boundaries (needs shapely, pyshp).
 pipeline/export_poi.py      GPX + KML for Garmin, Gaia, OsmAnd, CalTopo, Google My Maps.
 pipeline/wikidata_seed.py   QuickStatements batch to create one Wikidata item per standing marker.
-pipeline/build_basemap.py   Public-domain basemap (states, counties, highways, towns) from Census + Natural Earth → one PMTiles file.
+data/markers.geojson        The dataset (673 markers, 637 standing). Also copied to site/data/ for the map.
+data/markers.csv            Flat export of the same.
+data/wikidata_counties.json County QIDs used by the seed script.
+dist/                       Built exports: .gpx (all / MT / ID), .kml, wikidata_quickstatements.txt
+pipeline/build_basemap.py   Public-domain basemap (states, counties, highways, towns) from Census → one PMTiles file.
 pipeline/ingest_issues.py   Pulls accepted GitHub issues (from the site's forms) into data/contributions/.
 pipeline/serve.py           Local dev server with Range support (PMTiles needs it).
 pipeline/sources/           One JSON per additional state — see docs/adding-a-state.md.
-data/markers.geojson        The dataset (673 markers, 637 standing). Committed by the monthly rebuild PR.
-data/markers.csv            Flat export of the same.
-data/wikidata_counties.json County QIDs used by the seed script.
 site/index.html             Static MapLibre site. No build step, no API keys, no outside services.
-site/tiles/, site/fonts/    Built at deploy time (not committed): 12 MB nationwide basemap PMTiles, 300 KB marker
-                            PMTiles, and the label glyphs. `python pipeline/build_basemap.py` makes them locally.
-dist/                       Built exports (not committed): .gpx (all / MT / ID), .kml, wikidata_quickstatements.txt
+site/tiles/basemap.pmtiles  12 MB nationwide basemap, served by range requests from this folder.
+site/tiles/markers.pmtiles  The markers as vector tiles (300 KB) for anyone who wants them that way.
+site/fonts/                 Self-hosted glyphs for map labels.
 ```
 
 ## Sources (v0.1)
@@ -44,24 +43,23 @@ transcribing the surviving Fletcher-era signs from it.
 ## Schema
 
 Every feature carries: `id`, `state`, `title`, `subtitle`, `text`, `text_source`, `text_status`
-(`official` | `community` | `pending`), `topic`, `status` (`active` | `removed` | …), `route`, `milepost`, `county`,
-`county_fips`, `image_url` / `image_license` / `image_credit` (empty for now — Wikimedia Commons and user uploads planned),
+(`official` | `pending`), `topic`, `status` (`active` | `removed` | …), `route`, `milepost`, `county`,
+`image_url` / `image_license` / `image_credit` (empty for now — Wikimedia Commons and user uploads planned),
 `wikidata_qid` (empty for now), `source_url`, `source_agency`, `source_id`.
 
 ## Hosting
 
-Free and unmanaged by design. Fork it; the `Deploy site` workflow enables GitHub Pages on first run, builds the
-data, basemap tiles and fonts, and publishes `site/`. The `Monthly data rebuild` workflow keeps the data fresh and
-opens a PR you can merge.
+Free and unmanaged by design. Fork → Settings → Pages → source "GitHub Actions". The `Deploy site` workflow
+publishes `site/` and the `Monthly data rebuild` workflow keeps the data fresh and opens a PR you can merge.
 There is no server, no token, no tile host and no account other than GitHub. MapLibre reads the basemap and
 markers straight out of the repo with HTTP range requests. If you'd rather have a richer basemap, MapLibre
 can load a Mapbox or OpenFreeMap style instead — swap the `style` object in `index.html` — but then your
 fork depends on that service.
 
-## Build locally
+## Build
 
 ```
-pip install shapely pyshp pyogrio
+pip install shapely pyshp          # only enrich_county.py needs these
 python pipeline/build.py           # ~5 s
 python pipeline/enrich_county.py   # county / FIPS on every marker
 python pipeline/export_poi.py      # dist/*.gpx, dist/*.kml
@@ -72,9 +70,9 @@ python pipeline/serve.py           # http://localhost:8000 (plain http.server ca
 
 ## Using the POI files
 
-- **Garmin / Gaia GPS / OsmAnd / CalTopo / Organic Maps:** import `roadside-markers.gpx` (linked from the site footer). Every one of these
+- **Garmin / Gaia GPS / OsmAnd / CalTopo / Organic Maps:** import `dist/roadside-markers.gpx`. Every one of these
   can alert on approach to a waypoint, so you get "marker ahead" without installing anything new.
-- **Google My Maps:** import `roadside-markers.kml` (or the .gpx). Balloon shows the sign text.
+- **Google My Maps:** import `dist/roadside-markers.kml` (or the .gpx). Balloon shows the sign text.
 - **Apple / Google Maps turn-by-turn:** no bulk import; use the site's Directions link per marker.
 
 ## Seeding Wikidata
@@ -100,10 +98,10 @@ file ([docs/adding-a-state.md](docs/adding-a-state.md)).
 
 ## Roadmap
 
-- Every state: the generic adapter takes any ArcGIS feature service; see docs/adding-a-state.md
 - Wikidata nearest-neighbor join → Wikipedia article + Commons photo per marker
 - Photo upload + OCR queue for the Montana texts
-- Route mode: pick a route, get the markers along it in order (then the "approaching marker" read-aloud on top)
+- "Approaching marker" mode: watch position, read the sign aloud via Web Speech (the Read aloud button already exists)
+- More states: any DOT/SHPO with an ArcGIS feature service that has a text field drops in with ~40 lines
 
 ## Licenses
 
@@ -111,4 +109,4 @@ file ([docs/adding-a-state.md](docs/adding-a-state.md)).
 - Compiled dataset: CC BY 4.0 (see `DATA_LICENSE`) — attribute "Roadside contributors"
 - Marker texts remain © their issuing agency (Montana DOT; Idaho Transportation Department / Idaho State
   Historical Society) and are reproduced here as published public information. Each record names its source.
-- Basemap: US Census Bureau (public domain), Natural Earth (public domain)
+- Basemap: OpenFreeMap / OpenMapTiles / © OpenStreetMap contributors

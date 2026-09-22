@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 """
-Roadside — build the marker dataset.
+Roadside — build the marker dataset for Montana + Idaho.
 
 Pulls only officially published sources:
   * Montana DOT   : Historical_Highway_Marker feature service (titles + locations)
   * Montana DOT   : travinfo/geomarkers.aspx (full text for ~50 geologic markers)
   * Idaho ITD     : HistoricalMarkerSigns_ViewLayer feature service (full text)
-  * any state     : pipeline/sources/<xx>.json → generic ArcGIS adapter (see docs/adding-a-state.md)
-  * community     : data/contributions/*.json (accepted GitHub issues, see ingest_issues.py)
 
 Writes:
   data/markers.geojson   canonical dataset (also copied to site/data/)
@@ -24,7 +22,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 SITE_DATA = ROOT / "site" / "data"
-UA = "Roadside/0.1 (open-source roadside marker map; github.com/itogeo/roadside)"
+UA = "Roadside/0.1 (open-source roadside marker map)"
 
 MT_URL = ("https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/"
           "MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson")
@@ -56,7 +54,7 @@ def fetch(url: str, retries: int = 3) -> bytes:
 
 SMALL = {"a","an","and","at","but","by","for","in","of","on","or","the","to","vs"}
 def smart_title(s: str) -> str:
-    """Title-case ALL-CAPS titles without mangling Mc/Mac names, apostrophes or small words."""
+    """Title-case MDT's ALL-CAPS titles without mangling Mc/Mac names, apostrophes or small words."""
     if not s.isupper():
         return s
     words = []
@@ -74,12 +72,12 @@ def norm_title(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
 
 
-def scrape_mt_geologic(page: str) -> dict[str, list]:
-    """Return {normalized title: [{text, location, lat, lon, pdf, title}]} from MDT's geologic markers page."""
+def scrape_mt_geologic(page: str) -> dict[str, dict]:
+    """Return {normalized title: {text, location, lat, lon, pdf, title}} from MDT's geologic markers page."""
     i = page.find("1. Kootenai Falls and the Belt Supergroup")
     body = page[max(0, i - 2000):]
     parts = re.split(r"<h[2-4][^>]*>\s*(\d+)\.\s*([^<]+)</h[2-4]>", body)
-    out: dict[str, list] = {}
+    out = {}
     for k in range(1, len(parts) - 2, 3):
         title, chunk = parts[k + 1].strip(), parts[k + 2]
         pdf = re.search(r'href="([^"]+\.pdf)"', chunk, re.I)

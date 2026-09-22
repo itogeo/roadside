@@ -1,0 +1,41 @@
+name: Monthly data rebuild
+# Re-pulls the state sources, folds in accepted community issues, regenerates exports, opens a PR if anything changed.
+on:
+  schedule: [{ cron: "17 6 1 * *" }]
+  workflow_dispatch:
+permissions: { contents: write, pull-requests: write, issues: read }
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install shapely pyshp pyogrio
+      - name: Install tippecanoe
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq libsqlite3-dev zlib1g-dev
+          git clone --depth 1 https://github.com/felt/tippecanoe.git /tmp/tp && (cd /tmp/tp && make -j4 -s && sudo make install)
+      - name: Ingest community issues
+        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}", REPO: "${{ github.repository }}" }
+        run: python pipeline/ingest_issues.py
+      - name: Cache basemap downloads
+        uses: actions/cache@v4
+        with:
+          path: /tmp/base
+          key: basemap-census-2023
+      - run: |
+          python pipeline/build.py
+          python pipeline/enrich_county.py
+          python pipeline/export_poi.py
+          python pipeline/wikidata_seed.py
+          tippecanoe -o site/tiles/markers.pmtiles --force -Z0 -z10 -r1 -l markers --quiet data/markers.geojson
+          # the basemap adds US/state highways for every state that has markers, so it must be
+          # rebuilt whenever the state list changes — otherwise a newly added state has no roads
+          python pipeline/build_basemap.py
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          title: "Monthly data rebuild"
+          commit-message: "data: monthly rebuild"
+          branch: auto/rebuild
+          body: "Automated re-pull of state sources plus any new community submissions. Check `data/build_report.json` for coverage changes."

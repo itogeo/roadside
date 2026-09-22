@@ -14,9 +14,11 @@ body:
     id: coords
     attributes: { label: Coordinates, description: "lat, lon — long-press in Google/Apple Maps to copy them", placeholder: "46.5891, -112.0391" }
     validations: { required: true }
-  - type: input
+  - type: dropdown
     id: state
-    attributes: { label: State, description: Two-letter code, placeholder: MT }
+    attributes:
+      label: State
+      options: ["MT", "ID", "Other (say which below)"]
     validations: { required: true }
   - type: textarea
     id: text
