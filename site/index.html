@@ -104,6 +104,9 @@
   .actions button[aria-pressed=true]{background:var(--letter);color:var(--board)}
   /* the photograph of the sign: for markers whose text the state never published as data,
      this IS the content — it is the sign's exact wording, with no transcription in between */
+  .prov{font:400 12.5px/1.5 var(--sans);color:var(--letter-dim);margin:12px 0 0;
+        padding-top:10px;border-top:1px solid rgba(234,216,174,.18)}
+  .prov a{color:var(--letter)}
   .signshot{margin:16px 0 0;padding:0}
   .signshot a{display:block;border-radius:6px;overflow:hidden;background:#2C1B0D;line-height:0}
   .signshot a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
@@ -310,7 +313,7 @@
       <p class="state">${stateName} highway marker${p.route ? ' · ' + esc(p.route) + (p.milepost ? ' MP ' + esc(p.milepost) : '') : ''}</p>
       <h2>${esc(p.title)}</h2>
       ${p.subtitle ? `<p class="sub">${esc(p.subtitle)}</p>` : ''}
-      ${p.text ? `<p class="text">${esc(p.text)}</p>`
+      ${p.text ? `<p class="text">${esc(p.text)}</p>${p.text_status === 'transcribed' ? `<p class="prov">Transcribed from the photograph below, not published as text by the state. Check it against the photo — <a href="${issueUrl('fix-marker', p, lat, lon)}" target="_blank" rel="noopener">report an error</a>.</p>` : p.text_status === 'community' ? `<p class="prov">Contributed by a community mapper, not the state.</p>` : ''}`
                : p.image_url ? `<div class="pending">${stateName} hasn't published this sign's text as data — but MDT photographed the sign. Read it below: that is the sign's exact wording, not a transcription.</div>`
                : `<div class="pending">This sign's text hasn't been published online by ${stateName} yet. It's in the dataset as a location and title so it can be filled in from the agency or a photo of the sign.</div>`}
       ${p.image_url ? `

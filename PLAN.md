@@ -125,6 +125,41 @@ Idaho needs none of this: ITD already publishes `MainText` for 316 of 317. Its l
       label twice until it is regenerated:
       `python pipeline/build_basemap.py` (~120 MB of Census/TIGER downloads, cached after the first run).
 
+## Text coverage — where it actually stands
+
+Counting "has text" honestly, 2026-09-22:
+
+| | MT | ID |
+|---|---|---|
+| Official agency text | 59 | 316 |
+| Transcribed from the sign photograph | 3 | — |
+| Photograph only (no text yet) | 279 | — |
+| Neither text nor photograph | 14 | 1 (a removed sign) |
+
+**The official text is not complete either.** MDT's published text is one block of a multi-block
+sign. Checked against the photographs: on MT-206 the Geo-Facts and Geo-Activity panels are on the
+sign but absent from the official text; on MT-377 the official text is the right-hand Marias Pass
+sidebar, not the main column. So even a "has official text" marker is showing you part of the sign.
+A transcription from the photograph is *more* complete than MDT's own text data — MT-340, recovered
+from MDT's sign-artwork PDF, is 3,572 characters across 14 blocks against ~1,100–1,500 for a typical
+scraped text.
+
+**Getting to zero markers without text.** The 279 remaining photographed markers are all legible and
+all transcribable; it is a batch job, not a research problem. Three entries are done as a pilot
+(MT-1 and MT-3 read from photographs, MT-340 extracted from MDT's PDF) and the whole path is wired:
+`data/transcriptions.json` → `build.py: apply_transcriptions()` → `text_status: "transcribed"` →
+a provenance line in the UI next to the photograph it was read from.
+
+The 14 with neither text nor photograph cannot be solved from a desk — MDT never photographed them.
+They need a field photo (the `add-marker` issue form takes one) or the text from MHS.
+
+Rules that must hold for the remaining 279:
+- `text_status: "transcribed"`, never `"official"`. An agency text arriving later always wins.
+- The photograph it was read from is recorded on the record and shown beside the text, so every
+  claim is checkable. This is the mitigation that makes transcription acceptable at all.
+- Transcribe verbatim: the sign's own wording, spelling, casing and block order. MT-1 is in the
+  sign's original all-caps for that reason.
+
 ## The verbatim rule
 
 `text` must be **exactly what the sign says**. This is the project's one non-negotiable, and it

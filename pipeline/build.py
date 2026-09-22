@@ -280,12 +280,44 @@ def apply_sign_photos(feats: list[dict]) -> list[dict]:
     return feats
 
 
+def apply_transcriptions(feats: list[dict]) -> list[dict]:
+    """Fold in data/transcriptions.json — sign text read off the photographs for markers whose text
+    the state never published as data.
+
+    These are marked text_status="transcribed", never "official". The distinction is the point: an
+    official text came from the agency, a transcription is someone reading a photograph, and the
+    site shows the photograph next to it so any reader can check the claim. An agency text that
+    arrives later always wins."""
+    path = DATA / "transcriptions.json"
+    if not path.exists():
+        return feats
+    tx = json.loads(path.read_text()).get("transcriptions", {})
+    by_id = {f["properties"]["id"]: f["properties"] for f in feats}
+    n = skipped = 0
+    for mid, rec in tx.items():
+        p = by_id.get(mid)
+        if not p:
+            print(f"  transcription for unknown marker {mid} — ignored")
+            continue
+        if p.get("text_status") == "official":
+            skipped += 1          # never overwrite the agency's own words
+            continue
+        p["text"] = rec["text"]
+        p["text_source"] = rec.get("by") or "transcribed from the sign photograph"
+        p["text_status"] = "transcribed"
+        p["text_photo"] = rec.get("photo")
+        n += 1
+    print(f"transcriptions: {n} applied" + (f", {skipped} skipped (official text wins)" if skipped else ""))
+    return feats
+
+
 def main() -> None:
     feats = build_montana() + build_idaho()
     for cfg_path in sorted((ROOT / "pipeline" / "sources").glob("*.json")):
         feats += build_generic(json.loads(cfg_path.read_text()))
     feats = apply_contributions(feats)
     feats = apply_sign_photos(feats)
+    feats = apply_transcriptions(feats)
     gj = {"type": "FeatureCollection",
           "name": "roadside-markers",
           "license": "CC BY 4.0 (compilation). Marker texts © their issuing agency; see text_source.",
@@ -306,7 +338,9 @@ def main() -> None:
         s = [f["properties"] for f in feats if f["properties"]["state"] == st]
         rep[st] = {"markers": len(s), "active": sum(1 for p in s if p["status"] != "removed"),
                    "with_official_text": sum(1 for p in s if p["text"]),
+                   "transcribed_from_photo": sum(1 for p in s if p.get("text_status") == "transcribed"),
                    "with_sign_photo": sum(1 for p in s if p.get("image_url")),
+                   "still_no_text": sum(1 for p in s if not (p.get("text") or "").strip()),
                    "readable": sum(1 for p in s if p["text"] or p.get("image_url")),
                    "topics": sorted({p["topic"] for p in s if p["topic"]})}
     (DATA / "build_report.json").write_text(json.dumps(rep, indent=2))
