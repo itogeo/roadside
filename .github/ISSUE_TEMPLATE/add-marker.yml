@@ -1,0 +1,29 @@
+name: Add a missing marker
+description: A roadside marker that isn't on the map yet.
+title: "Add: "
+labels: ["marker", "add"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks! Fill in what you know — a title and rough location is enough to start. The monthly rebuild pulls these in automatically.
+  - type: input
+    id: title
+    attributes: { label: Marker title, description: As written on the sign }
+    validations: { required: true }
+  - type: input
+    id: coords
+    attributes: { label: Coordinates, description: "lat, lon — long-press in Google/Apple Maps to copy them", placeholder: "46.5891, -112.0391" }
+    validations: { required: true }
+  - type: input
+    id: state
+    attributes: { label: State, description: Two-letter code, placeholder: MT }
+    validations: { required: true }
+  - type: textarea
+    id: text
+    attributes: { label: Sign text, description: Transcribe the sign if you can. Leave blank otherwise. }
+  - type: input
+    id: photo
+    attributes: { label: Photo link, description: A Wikimedia Commons or Flickr link with a CC license, or drag an image into the field below }
+  - type: textarea
+    id: notes
+    attributes: { label: Anything else, description: Which highway, direction of travel, who put it up, etc. }
