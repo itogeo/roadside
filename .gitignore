@@ -1,0 +1,8 @@
+__pycache__/
+.DS_Store
+# built at deploy time
+site/tiles/
+site/fonts/
+site/data/
+site/dist/
+dist/
