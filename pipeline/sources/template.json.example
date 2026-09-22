@@ -1,0 +1,20 @@
+{
+  "state": "XX",
+  "agency": "State Historical Society / Department of Transportation",
+  "url": "https://services.arcgis.com/.../FeatureServer/0",
+  "fields": {
+    "id": "OBJECTID",
+    "title": "TITLE",
+    "subtitle": null,
+    "text": "MARKER_TEXT",
+    "topic": null,
+    "status": null,
+    "route": "HIGHWAY",
+    "milepost": null,
+    "county": "COUNTY"
+  },
+  "status_map": { "Active": "active", "Missing": "removed" },
+  "topic_map": {},
+  "where": "1=1",
+  "notes": "Anything a future maintainer should know: license page, contact, quirks."
+}
