@@ -1,0 +1,23 @@
+name: Add your state
+description: Point us at a state's official marker data and we'll add it.
+title: "State: "
+labels: ["state"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Most state DOTs or historical societies publish their markers as an ArcGIS feature service. If you can find that URL,
+        adding the state is a 20-line config file — see `docs/adding-a-state.md`. If you can't, just tell us what you found.
+  - type: input
+    id: state
+    attributes: { label: State }
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes: { label: Data URL, description: "ArcGIS FeatureServer/MapServer, open-data portal, PDF guide, anything official" }
+  - type: dropdown
+    id: has_text
+    attributes: { label: Does the source include the sign text?, options: [Yes, No, Not sure] }
+  - type: textarea
+    id: notes
+    attributes: { label: Notes, description: Who runs the program, license/terms you saw, anything odd about the data }
