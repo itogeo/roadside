@@ -1,0 +1,20 @@
+name: Fix a marker entry
+description: Wrong location, wrong text, sign removed, typo.
+title: "Fix: "
+labels: ["marker", "fix"]
+body:
+  - type: input
+    id: marker_id
+    attributes: { label: Marker id, description: "Prefilled from the site (e.g. ID-13, MT-42)" }
+    validations: { required: true }
+  - type: input
+    id: coords
+    attributes: { label: Coordinates on record, description: Prefilled — change only if the pin is in the wrong place }
+  - type: dropdown
+    id: kind
+    attributes: { label: What's wrong, options: [Location is off, Text has an error, Sign has been removed, Title is wrong, Something else] }
+    validations: { required: true }
+  - type: textarea
+    id: correction
+    attributes: { label: Correction, description: The corrected text / coordinates / details }
+    validations: { required: true }
