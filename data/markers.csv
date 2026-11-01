@@ -1,7 +1,23 @@
 id,state,title,topic,status,text_status,text,route,milepost,county,source_agency,source_url,lat,lon
-MT-1,MT,Marysville Montana,History,fair,pending,,,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,46.748368,-112.299758
+MT-1,MT,Marysville Montana,History,fair,transcribed,"MARYSVILLE MONTANA
+
+IN 1870 THE MINING TOWN OF MARYSVILLE WAS ESTABLISHED AND NAMED FOR THE FIRST PIONEER WOMAN HERE MARY RALSTON BY THOMAS CRUSE OWNER OF THE FAMOUS DRUM LUMMON MINE
+
+BY 1900 THE MARYSVILLE MINING DISTRICT WAS REPORTED TO BE THE RICHEST GOLD MINING AREA IN THE WORLD WITH A PRODUCTION OF $60,000,000 ONE-HALF OF WHICH WAS TAKEN FROM THE DRUM LUMMON MINE
+
+OTHER LOCAL RICH GOLD MINES ALSO PRODUCING AT THAT TIME WERE THE BALD MOUNTAIN BALD BUTTE EMPIRE BELMONT PENOBSCOT GLOSTER AND SHANNON
+
+THE TOWNS POPULATION AT ITS PEAK WAS ESTIMATED TO BE 4000 RESIDENTS THEY HAD THE SERVICE OF TWO RAILROADS AND 60 BUSINESS ESTABLISHMENTS INCLUDING 2 NEWSPAPERS
+
+ERECTED BY THE MARYSVILLE PIONEERS ASSOCIATION-1970",,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,46.748368,-112.299758
 MT-2,MT,"Park City, Ho! for the States!",History,excellent,pending,,,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,45.598088,-109.065075
-MT-3,MT,"Garnets, Vigilantes and Gold Dredges",History,good,pending,,,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,45.319997,-112.076496
+MT-3,MT,"Garnets, Vigilantes and Gold Dredges",History,good,transcribed,"Garnets, Vigilantes and Gold Dredges
+
+The Ruby River was called the Passamari by the Shoshoni Indians and the Stinking Water by the miners in the early 1860's. Later, it was mistakenly renamed the Ruby, although the gems found along its length were actually garnets.
+
+The road through the valley that connected Virginia City and Bannack was the haunt of prospectors, road agents and vigilantes after gold was discovered in Alder Gulch in 1863. The road eventually became known as the Vigilante Trail. During the 1920's, distinctive signs with the dreaded vigilante numbers 3-7-77 on a blue, white and red background marked the trail.
+
+The large gravel piles to the west are the tailings of gold dredging operations that occurred here over a twenty-year period beginning in 1899. The Conrey Placer Mining Company operated monster dredge boats that literally churned the gulch inside-out, creating huge piles of gravel where only a tangle of scrub brush and stunted trees could grow. It was the final chapter in the history of placer mining in Alder Gulch. The gold mined by the dredges financed Harvard University in the early 20th century.",,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,45.319997,-112.076496
 MT-4,MT,Buffalo Country,History,excellent,pending,,,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,46.089857,-107.660028
 MT-5,MT,The Divide Trophy,OTHER,fair,pending,,,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,45.914617,-112.377208
 MT-6,MT,Beebe,History,excellent,pending,,,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,46.055871,-105.571211
@@ -291,7 +307,33 @@ MT-334,MT,A Trail Woefully Hard to Travel: the Bridger Cut-,History,excellent,pe
 MT-336,MT,"Jim Bridger, Mountain Man",History,excellent,pending,,,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,45.29109,-108.914261
 MT-337,MT,Mining Plays Second Fiddle,History,good,pending,,,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,47.228475,-110.447671
 MT-339,MT,Fort Benton,History,,pending,,,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,47.839537,-110.685247
-MT-340,MT,The Little Belt Mountains,Geology / natural history,,pending,,,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,47.081097,-110.824958
+MT-340,MT,The Little Belt Mountains,Geology / natural history,,transcribed,"The Little Belt Mountains
+
+The three major rock types (igneous, sedimentary, and metamorphic) can be seen along a 20-mile stretch of U.S. Highway 89 south of here. They range from very old to relatively young by geologic standards. Cliffs of gray Madison Group limestone, up to 1500 feet thick, are prominent along U.S. 89 where it descends into Monarch from the north. From Monarch to Neihart the sedimentary rocks exposed are progressively older, from 300 million-year-old Madison Group to the 500 million-year-old Flathead Formation. Quartzite from the Flathead Formation was quarried in this area for use as a decorative stone. In the Neihart area, much older (1.8 billion years old) metamorphic rocks were intruded by magma that cooled to produce the Pinto Diorite that is only slightly younger than the surrounding metamorphic rocks. The Pinto Diorite can be recognized by prominent blocky feldspar crystals in a greenish gray groundmass. The Neihart Quartzite, slightly younger than the other metamorphic rocks, but older than the Flathead Formation is exposed at Memorial Falls. This scenic park is about 0.4 miles from the highway a little over 2 miles southeast of Neihart. The youngest rock seen from the highway is a syenite, a close geologic relative of granite. Only about 50 million years old, the syenite forms craggy exposures along the east side of the highway a little more than eight miles north of Neihart.
+
+The Y-G Be Line
+
+Montana’s highways once had names instead of numbers. The Yellowstone-Glacier Bee Line Highway Association formed in 1915 to develop and promote an automobile route between Gardiner at the north entrance to Yellowstone National Park and Browning near Glacier National Park. Today, U.S. 89 follows the route of the old Y-G Bee Line Highway. The highway was one of thirteen named highways that crisscrossed Montana in the 1910s and 1920s. Formed primarily to promote tourist travel between the national parks, the named highways also advertised businesses along their routes in promotional brochures. The road had colorful names like Yellowstone Trail, Roosevelt Highway, Vigilante Trail, and Custer Battlefield Highway. Each blazed their routes with distinctive symbols, so that motorists could follow them to their destination. The Y-G Bee Line Highway’s symbol consisted of a rectangle divided in half by the color yellow at the top and black at the bottom. The Y-G Bee Line Highway Association remained active promoting good roads in Montana long after the route was designated U.S. 89.
+
+Intrusive igneous rock – Tertiary age
+
+Neihart Quartzite – Precambrian age
+
+Pinto Diorite – Precambrian age
+
+Gneiss – Precambrian age
+
+Volcanic rock – Tertiary age
+
+Jefferson Formation – limestone and dolomite – Devonian age
+
+Geo-facts: • The communities of Monarch and Neihart originated as mining camps in 1882. Prospectors discovered silver and lead in the surrounding mountains in 1881. Gold and zinc was also mined in the area. • Some magma forced its way between layers of sedimentary rock to create blisters or pockets of molten rock called laccoliths. The conduits that fed the magma into the laccoliths radiate out from them like spokes on a wheel and are called dikes. The laccoliths look like flat topped buttes and the dikes are the giant rock walls that lead to them.
+
+Geo-activity:
+
+Neihart in the Fall of 1892.
+
+• As you travel along the highway between Monarch and Neihart, imagine what this area was like more than a 100 years ago when the mines were active. What kinds of minerals do you think they dug from the mines?",,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,47.081097,-110.824958
 MT-342,MT,Beaverhead Rock,Geology / natural history,excellent,official,"The prominent geological feature to the west is called Beaverhead Rock. On the afternoon of August 8, 1805, members of the Lewis and Clark Expedition pulled its canoes up the Beaverhead River toward the Continental Divide. They sighted what Clark later called a ""remarkable Clift"" to the southwest. Sacajawea recognized this large promontory and told the captains that her people called it ""beaver’s head."" Beaverhead Rock is composed principally of Madison Limestone. About 350 million years ago, a shallow sea covered much of Montana. Billions of tiny marine creatures thrived in the water and when they died their bodies settled into the muck on the sea bed. After about 10 million years of accumulation and many more millions of years of compaction this muck became the pale gray rocks that are known today as Madison Limestone. The limestone is common throughout Montana, eastern Idaho, northern Wyoming, and in the Dakotas. In Montana, the limestone beds range from 1,000 to 2,000 feet thick. Because in Montana’s dry climate Madison Limestone resists weathering and erosion much better than most other kinds of rocks, it forms many of the spectacular cliffs and ridges that make Montana so scenic. Beaverhead Rock served as an important landmark not only for Lewis and Clark, but also for the trappers, miners, and traders who followed them into this area. It was known to many of them as Point of Rocks. In 1863, a man named Goetschius built a stage station on the ""well-traveled, deep rutted road"" between Bannack and Alder Gulch near here. It was part of the Montana-Utah Road, but was also known as Road Agents Trail because of all the robberies that occurred along it during the 1860s. In addition to changing tired horses for fresh animals for the stagecoaches, the station also served meals and provided a place to sleep for stagecoach travelers.",,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,45.365831,-112.473873
 MT-343,MT,A New World: Tertiary Mammals,History,excellent,official,"Between the time dinosaurs went extinct 65 million years ago, and the beginning of the Ice Age, some 2 million years ago, is a time called the Age of Mammals. During this period of time the western third of Montana experienced a variety of geological activities, some of which raised mountains and lowered valleys. The valleys became the homes of a wide variety of interesting and bizarre animals. Many of these have since gone extinct or today live in much warmer climates. During the early part of this time period, about 35 million years ago, Montana was home to animals like the double-horned rhinoceros-like brontotheres, and primitive little three-toed horses, camels, and deer. In the later part of the time period, 20 million years ago, the valleys hosted bizarre-looking ancestors of our modern elephants, camels, deer, and pigs. These included elephants with shovel-like tusks, deer-like animals with forked horns over their noses, and pigs the size of hippos. Montana was lush and subtropical. The extinction of these groups of animals would coincide with the coming of the Ice Age, and the arrival of humans less than 50,000 years ago.",,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,45.810507,-112.168685
 MT-345,MT,A Fantastically Beautiful Place: the Medicine Rock,Geology / natural history,excellent,pending,,,,,Montana Department of Transportation,https://gis.mtmdt.us/server/rest/services/MDTGIS/Historical_Highway_Marker/MapServer/0,46.045658,-104.458287

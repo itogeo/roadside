@@ -3,6 +3,10 @@
     "markers": 317,
     "active": 281,
     "with_official_text": 316,
+    "transcribed_from_photo": 0,
+    "with_sign_photo": 0,
+    "still_no_text": 1,
+    "readable": 316,
     "topics": [
       "Education",
       "Engineering / technology",
@@ -20,7 +24,11 @@
   "MT": {
     "markers": 356,
     "active": 356,
-    "with_official_text": 59,
+    "with_official_text": 62,
+    "transcribed_from_photo": 3,
+    "with_sign_photo": 340,
+    "still_no_text": 294,
+    "readable": 342,
     "topics": [
       "Geology / natural history",
       "History",
